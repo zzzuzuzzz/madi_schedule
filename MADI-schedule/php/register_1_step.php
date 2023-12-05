@@ -20,7 +20,7 @@
                 exit();
             }
             else {
-                $mysql->query("INSERT INTO `main_table` (`email`, `password`, `work`) VALUES($mail, $password, $select)");
+                $mysql -> query("INSERT INTO `main_table` (`email`, `password`, `work`, `name`, `class`) VALUES($mail, $password, $select, null, null)");
             }
             $mysql->close();
             header('Location: ../html/auth/register_teacher_step.html');
