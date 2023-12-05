@@ -1,10 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../../css/auth/register.css">
 </head>
 <body>
-
+<div class="main_containers">
+    <form action="../../php/register_2_step.php" method="post" class="main_containers_container">
+        <div class="main_containers_container_logo">
+            <div class="img_main_containers_container_logo"></div>
+        </div>
+        <div class="main_containers_container_text grid_box">
+            <p class="main_containers_container_text_title">Регистрация</p>
+        </div>
+        <div class="main_containers_container_password grid_box inp_box inp_box_2">
+            <input type="text" class="ipt_main_containers_container_password grid_box_inp inp" id="name" name="mane" placeholder="Ivan Alexseevich">
+            <label class="lb_main_containers" for="name">Ваше ФИО</label>
+        </div>
+        <div class="main_containers_container_opt_one grid_box">
+            <label>
+                <select class="opt_main_containers_container_opt_one grid_box_inp inp" name="select">
+                    <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
+                    <option name="ATF" value="ATF">Автомобильный транспорт</option>
+                    <option name="DSF" value="DSF">Дорожно-строительный</option>
+                    <option name="FDM" value="FDM">Дорожные и технологические машины</option>
+                    <option name="KMF" value="KMF">Конструкторско-механический</option>
+                    <option name="EEF" value="EEF">Энерго-экологический</option>
+                    <option name="FL" value="FL">Логистика и общетранспортные проблемы</option>
+                    <option name="FU" value="FU">Управление</option>
+                    <option name="EF" value="EF">Экономический</option>
+                    <option name="ZF" value="ZF">Заочный</option>
+                </select>
+            </label>
+        </div>
+        <div class="main_containers_container_continue grid_box">
+            <input type="submit" class="btn_main_containers_container_continue grid_box_inp" value="Продолжить">
+        </div>
+        <div class="main_containers_container_back grid_box">
+            <input type="button" class="btn_main_containers_container_back grid_box_inp" value="Вернутся назад">
+        </div>
+    </form>
+</div>
+<script src="../../js/auth/register_teacher_step.js"></script>
 </body>
 </html>

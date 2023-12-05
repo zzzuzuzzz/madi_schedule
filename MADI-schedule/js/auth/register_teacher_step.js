@@ -1,10 +1,9 @@
-let result = document.querySelector('.opt_main_containers_container_opt_one')
-
 let btn_back = document.querySelector('.btn_main_containers_container_back')
 btn_back.onclick = function () {
-    document.location.href = '../../html/auth/auth.html'
+    document.location.href = '../../html/auth/register_1_step.html'
 }
 
+let result = document.querySelector('.opt_main_containers_container_opt_one')
 
 let form = document.querySelector('.main_containers_container')
 
