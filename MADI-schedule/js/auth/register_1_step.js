@@ -6,13 +6,10 @@ btn_back.onclick = function () {
 }
 
 
-let btn_enter = document.querySelector('.btn_main_containers_container_continue')
-btn_enter.onclick = function () {
-    if (result.value === 'teacher') {
-        document.location.href = '../../html/auth/register_teacher_step.html'
-    } else if (result.value === 'student') {
-        document.location.href = '../../html/auth/register_student_step.html'
-    } else {
+let form = document.querySelector('.main_containers_container')
+
+form.addEventListener('submit', () => {
+    if (result.value === '') {
         alert("Вы должны выбрать один из вариантов")
     }
-}
+})
