@@ -14,13 +14,13 @@
         echo 'Вы не выбрали вариант из выпадающего списка';
     } else {
 
-        $mysql = new mysqli('192.168.1.74', 'admin', 'ijhyu-13113', 'madi');
+        $mysql = new mysqli('192.168.1.74:3306', 'admin', 'ijhyu13113', 'madi');
         if ($mysql->connect_error) {
             echo 'Error Number: '.$mysql->connect_errno.'<br>';
             echo 'Error: '.$mysql->connect_error;
             exit();
         } else {
-            $mysql -> query("INSERT INTO `main_table` (`email`, `password`, `work`, `name`, `class`) VALUES($mail, $password, $select, $mail, $mail)");
+            $mysql -> query("INSERT INTO `madiAuth` (`email`, `password`, `work`, `name`, `class`) VALUES($mail, $password, $select, $mail, $mail)");
         }
         $mysql->close();
         if ($select === 'teacher') {
