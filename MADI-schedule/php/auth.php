@@ -18,12 +18,23 @@
             exit();
         } else {
             $mailSql = $mysql -> query("SELECT `email` FROM `madiAuth` WHERE `email` = '$mail'");
+            if ($mailSql === "") {
+                echo "ничего нет";
+            } else {
+                $passwordSql = $mysql -> query("SELECT `password` FROM `madiAuth` WHERE `email` = '$mail'");
+                if ($passwordSql === "") {
+                    echo "Пароля нет";
+                } else {
+                    if (($passwordSql === $password) && ($mailSql === $mail)){
+                        echo "все прошло успешно";
+                    } else {
+                        echo "Пароль или логин не подходит";
+                    }
+                }
+            }
         }
         $mysql->close();
 
-        if ($mailSql === "") {
-            echo "ничего нет";
-        }
 //        if ($select === 'teacher') {
 //            header('Location: ../html/auth/register_teacher_step.html');
 //            exit();
