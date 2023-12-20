@@ -14,7 +14,7 @@
         echo 'Вы не выбрали вариант из выпадающего списка';
     } else {
 
-        $mysql = new mysqli('192.168.1.74', 'test', 'test', 'test');
+        $mysql = new mysqli('192.168.1.74', 'admin', 'ijhyu-13113', 'madi');
         if ($mysql->connect_error) {
             echo 'Error Number: '.$mysql->connect_errno.'<br>';
             echo 'Error: '.$mysql->connect_error;
