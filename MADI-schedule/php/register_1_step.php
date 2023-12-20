@@ -20,7 +20,7 @@
             echo 'Error: '.$mysql->connect_error;
             exit();
         } else {
-            $mysql -> query("INSERT INTO `madiAuth` (`email`, `password`, `work`, `name`, `class`) VALUES($mail, $password, $select, $mail, $mail)");
+            $mysql -> query("INSERT INTO `madiAuth` (`email`, `password`, `work`, `name`, `class`) VALUES('$mail', '$password', '$select', '$mail', '$mail')");
         }
         $mysql->close();
         if ($select === 'teacher') {

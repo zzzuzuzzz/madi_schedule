@@ -7,7 +7,7 @@ btn_register.onclick = function () {
     document.location.href = 'register_1_step.html'
 }
 
-let btn_enter = document.querySelector('.btn_main_containers_container_enter')
-btn_enter.onclick = function () {
-    document.location.href = '../../html/main_html/schedules.html'
-}
+// let btn_enter = document.querySelector('.btn_main_containers_container_enter')
+// btn_enter.onclick = function () {
+//     document.location.href = '../../html/main_html/schedules.html'
+// }
