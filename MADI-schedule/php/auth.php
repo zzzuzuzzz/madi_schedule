@@ -17,12 +17,12 @@
             echo 'Error: '.$mysql->connect_error;
             exit();
         } else {
-            $mailSql = $mysql -> query("SELECT EXISTS(SELECT `email` FROM `madiAuth` WHERE `email` = '$mail')");
+            $mailSql = $mysql -> query("SELECT `email` FROM `madiAuth` WHERE `email` = '$mail'");
         }
         $mysql->close();
 
-        if ($mailSql === True) {
-            echo $mailSql;
+        if ($mailSql === "") {
+            echo "ничего нет";
         }
 //        if ($select === 'teacher') {
 //            header('Location: ../html/auth/register_teacher_step.html');
