@@ -14,7 +14,7 @@ if (trim($select) === '') {
         echo 'Error: ' . $mysql->connect_error;
         exit();
     } else {
-        $mysql->query("UPDATE `madiAuth` SET `name` = '$name', `class` = '$select' WHERE `id` = ORDER BY `id` DESC LIMIT 1");
+        $mysql->query("UPDATE `madiAuth` SET (`name` = '$name', `class` = '$select') WHERE `id` = ORDER BY `id` DESC LIMIT 1");
     }
     $mysql->close();
     header('Location: ../html/auth/register_final_step.html');

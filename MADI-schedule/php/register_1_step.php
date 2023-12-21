@@ -22,17 +22,17 @@
         } else {
             if ($mysql -> query("SELECT `email` FROM `madiAuth` WHERE `email` = '$mail'") === $mail) {
                 echo "Такой email уже используюется";
-                exit();
+                $mysql->close();
             } else {
                 $mysql -> query("INSERT INTO `madiAuth` (`email`, `password`, `work`, `name`, `class`) VALUES('$mail', '$password', '$select', '$mail', '$mail')");
+                $mysql->close();
+                if ($select === 'teacher') {
+                    header('Location: ../html/auth/register_teacher_step.html');
+                    exit();
+                } else if ($select === 'student') {
+                    header('Location: ../html/auth/register_student_step.html');
+                    exit();
+                }
             }
-        }
-        $mysql->close();
-        if ($select === 'teacher') {
-            header('Location: ../html/auth/register_teacher_step.html');
-            exit();
-        } else if ($select === 'student') {
-            header('Location: ../html/auth/register_student_step.html');
-            exit();
         }
     }
