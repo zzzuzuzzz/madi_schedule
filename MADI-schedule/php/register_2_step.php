@@ -2,9 +2,9 @@
 $name = $_POST['name'];
 $select = $_POST['select'];
 
-//if (trim($name) === '') {
-//    echo 'Вы не ввели свое ФИО';
-//}
+if (trim($name) === '') {
+    echo 'Вы не ввели свое ФИО';
+}
 if (trim($select) === '') {
     echo 'Вы не выбрали вариант из выпадающего списка';
 } else {
@@ -14,7 +14,7 @@ if (trim($select) === '') {
         echo 'Error: ' . $mysql->connect_error;
         exit();
     } else {
-        $mysql->query("UPDATE `madiAuth` SET (`name` = '$name', `class` = '$select') WHERE `id` = ORDER BY `id` DESC LIMIT 1");
+        $mysql->query("UPDATE madiAuth SET `name` = '$name', `class` = '$select' order by `id` DESC limit 1");
     }
     $mysql->close();
     header('Location: ../html/auth/register_final_step.html');
