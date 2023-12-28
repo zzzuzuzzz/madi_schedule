@@ -3,7 +3,11 @@
     $password = $_POST['password'];
     $mailSql = '';
     $passwordSql = '';
+    $mailSqlPHP = '';
+    $passwordSqlPHP = '';
 
+    $link = mysqli_connect('localhost', 'admin', 'ijhyu13113', 'madi');
+    $close = mysqli_close();
 
     if (trim($mail) === '') {
         echo 'Вы не ввели e-mail';
@@ -11,25 +15,23 @@
         echo 'Недопустимая длина пароля';
     } else {
 
-        $mysql = new mysqli('192.168.1.74:3306', 'admin', 'ijhyu13113', 'madi');
+        $mysql = new mysqli('localhost', 'admin', 'ijhyu13113', 'madi');
         if ($mysql->connect_error) {
             echo 'Error Number: '.$mysql->connect_errno.'<br>';
             echo 'Error: '.$mysql->connect_error;
             exit();
         } else {
-            $mailSql = $mysql -> query("SELECT `email` FROM `madiAuth` WHERE `email` = '$mail'");
-            if ($mailSql === "") {
+            $mailSql = $mysql -> query(" SELECT EXISTS(SELECT `email` FROM `madiAuth` WHERE `email` = '$mail')");
+            $mailSqlPHP = mysqli_fetch_array($mysql -> query("SELECT `email` FROM `madiAuth` WHERE `email` = '$mail'"));
+            echo $mailSqlPHP;
+            if (!$mailSql) {
                 echo "ничего нет";
             } else {
-                $passwordSql = $mysql -> query("SELECT `password` FROM `madiAuth` WHERE `email` = '$mail'");
-                if ($passwordSql === "") {
-                    echo "Пароля нет";
+                $passwordSqlPHP = mysqli_fetch_array($mysql -> query("SELECT `password` FROM `madiAuth` WHERE `email` = '$mail'"));
+                if (($passwordSqlPHP === $password) && ($mailSqlPHP === $mail)){
+                    echo "все прошло успешно";
                 } else {
-                    if (($passwordSql === $password) && ($mailSql === $mail)){
-                        echo "все прошло успешно";
-                    } else {
-                        echo "Пароль или логин не подходит";
-                    }
+                    echo "Пароль или логин не подходит";
                 }
             }
         }
