@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="main_containers">
-    <form action="../../php/register_1_step.php" method="post" class="main_containers_container">
+    <form action="../../vendor/register_1_step.php" method="post" class="main_containers_container">
         <div class="main_containers_container_logo">
             <div class="img_main_containers_container_logo"></div>
         </div>
@@ -26,8 +26,8 @@
             <label class="lb_main_containers" for="password">Введите пароль</label>
         </div>
         <div class="main_containers_container_password grid_box inp_box inp_box_2">
-            <input type="password" class="ipt_main_containers_container_password grid_box_inp inp" id="password_two" name="password_two" placeholder="alexander@itchief.ru">
-            <label class="lb_main_containers" for="password_two">Повторите пароль</label>
+            <input type="password" class="ipt_main_containers_container_password grid_box_inp inp" id="password_confirm" name="password_confirm" placeholder="alexander@itchief.ru">
+            <label class="lb_main_containers" for="password_confirm">Повторите пароль</label>
         </div>
         <div class="main_containers_container_opt_one grid_box">
             <label>

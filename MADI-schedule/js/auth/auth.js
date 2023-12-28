@@ -4,10 +4,10 @@ btn_forgot_password.onclick = function () {
 }
 let btn_register = document.querySelector('.btn_main_containers_container_register')
 btn_register.onclick = function () {
-    document.location.href = 'register_1_step.html'
+    document.location.href = 'register_1_step.php'
 }
 
-let btn_enter = document.querySelector('.btn_main_containers_container_enter')
-btn_enter.onclick = function () {
-    document.location.href = '../../html/main_html/schedules.html'
-}
+// let btn_enter = document.querySelector('.btn_main_containers_container_enter')
+// btn_enter.onclick = function () {
+//     document.location.href = '../../html/main_html/schedules.html'
+// }
