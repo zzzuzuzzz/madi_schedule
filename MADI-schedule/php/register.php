@@ -11,10 +11,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <form action="../vendor/signup.php" method="post">
+
+    <form>
         <label for="email">Введите свой Email</label>
         <input type="email" id="email" placeholder="madi@mail.ru" name="email">
         <label for="password">Введите пароль</label>
@@ -30,16 +31,14 @@
                 <option name="student" value="student">Вы студент</option>
             </select>
         </label>
-        <button type="submit">Войти</button>
+        <button type="submit" class="btnRegister">Зарегестрироваться</button>
         <p>
             У вас уже есть аккаунт? - <a href="../index.php">Войдите в него!</a>
         </p>
-        <?php
-        if (isset($_SESSION['msg']) && !empty($_SESSION['msg'])) {
-            echo '<p class="msg"> ' . $_SESSION['msg'] . ' </p>';
-            unset($_SESSION['msg']);
-        }
-        ?>
+        <p class="msg none">Lorem ipsum.</p>
     </form>
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -1,68 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="madi@192.168.1.74">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.49">
-    <root id="1">
-      <DefaultCasing>mixed/mixed</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||admin||ALTER|G
-|root||root||ALTER|G
-|root||admin||ALTER ROUTINE|G
-|root||root||ALTER ROUTINE|G
-|root||admin||CREATE|G
-|root||root||CREATE|G
-|root||admin||CREATE ROUTINE|G
-|root||root||CREATE ROUTINE|G
-|root||root||CREATE TABLESPACE|G
-|root||admin||CREATE TEMPORARY TABLES|G
-|root||root||CREATE TEMPORARY TABLES|G
-|root||admin||CREATE USER|G
-|root||root||CREATE USER|G
-|root||admin||CREATE VIEW|G
-|root||root||CREATE VIEW|G
-|root||admin||DELETE|G
-|root||root||DELETE|G
-|root||admin||DROP|G
-|root||root||DROP|G
-|root||admin||EVENT|G
-|root||root||EVENT|G
-|root||admin||EXECUTE|G
-|root||root||EXECUTE|G
-|root||admin||FILE|G
-|root||root||FILE|G
-|root||admin||INDEX|G
-|root||root||INDEX|G
-|root||admin||INSERT|G
-|root||root||INSERT|G
-|root||admin||LOCK TABLES|G
-|root||root||LOCK TABLES|G
-|root||admin||PROCESS|G
-|root||root||PROCESS|G
-|root||admin||REFERENCES|G
-|root||root||REFERENCES|G
-|root||admin||RELOAD|G
-|root||root||RELOAD|G
-|root||admin||REPLICATION CLIENT|G
-|root||root||REPLICATION CLIENT|G
-|root||admin||REPLICATION SLAVE|G
-|root||root||REPLICATION SLAVE|G
-|root||admin||SELECT|G
-|root||root||SELECT|G
-|root||admin||SHOW DATABASES|G
-|root||root||SHOW DATABASES|G
-|root||admin||SHOW VIEW|G
-|root||root||SHOW VIEW|G
-|root||admin||SHUTDOWN|G
-|root||root||SHUTDOWN|G
-|root||root||SUPER|G
-|root||admin||TRIGGER|G
-|root||root||TRIGGER|G
-|root||admin||UPDATE|G
-|root||root||UPDATE|G
-|root||admin||grant option|G
-|root||root||grant option|G</Grants>
-      <ServerVersion>5.6.51</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>

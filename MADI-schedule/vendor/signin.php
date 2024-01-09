@@ -7,7 +7,28 @@
     }
 
     $email = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
+
+    $errorFields = [];
+
+    if ($email === '') {
+        $errorFields[] = 'email';
+    }
+    if ($password === '') {
+        $errorFields[] = 'password';
+    }
+
+    if (!empty($errorFields)) {
+        $response = [
+            "status" => false,
+            "type" => 1,
+            "message" => "Проверте правильность полей",
+            "fields" => $errorFields
+        ];
+        echo json_encode($response);
+        die();
+    }
+    $password = md5($password);
 
     $checkUser = mysqli_query($connect, "SELECT * FROM `madiAuth` WHERE `email` = '$email' AND `password` = '$password'");
 
@@ -20,10 +41,18 @@
             'email' => $user['email']
         ];
 
-        header('Location: ../php/profile.php');
-        exit;
+        $response = [
+            "status" => true
+        ];
+
+        echo json_encode($response);
+
+
     } else {
-        $_SESSION['msg'] = 'Не верный логин или пароль';
-        header('Location: ../index.php');
-        exit;
+        $response = [
+            "status" => false,
+            "message" => 'Не верный логин или пароль'
+        ];
+
+        echo json_encode($response);
     }

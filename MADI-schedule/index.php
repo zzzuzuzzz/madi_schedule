@@ -11,24 +11,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <form action="vendor/signin.php" method="post">
-        <label for="email">Введите свой Email</label>
-        <input type="email" id="email" name="email" placeholder="madi@mail.ru">
-        <label for="password">Введите пароль</label>
-        <input type="password" id="password" name="password" placeholder="********">
-        <button type="submit">Войти</button>
+
+    <form>
+        <label>Введите свой Email</label>
+        <input type="email" name="email" placeholder="madi@mail.ru">
+        <label>Введите пароль</label>
+        <input type="password" name="password" placeholder="********">
+        <button type="submit" class="btnEnter">Войти</button>
         <p>
             У вас нет аккаунта? - <a href="php/register.php">Зарегистрируйтесь!</a>
         </p>
-        <?php
-        if (isset($_SESSION['msg']) && !empty($_SESSION['msg'])) {
-            echo '<p class="msg"> ' . $_SESSION['msg'] . ' </p>';
-            unset($_SESSION['msg']);
-        }
-        ?>
+        <p class="msg none">Lorem ipsum dolor sit amet.</p>
     </form>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

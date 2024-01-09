@@ -39,13 +39,19 @@ button {
     border: unset;
     cursor: pointer;
 }
+.error {
+    border-bottom: 2px solid red;
+}
 .msg {
     border: 2px solid #c20e0e;
-    border-radius: 3px;
+    border-radius: 15px;
     background: #ffc4c4;
     padding: 10px;
     text-align: center;
     font-weight: bold;
+}
+.none {
+    display: none;
 }
 .logout {
     color: #c20e0e;
