@@ -48,18 +48,9 @@ $('.btnRegister').click(function (event) {
 
     let email = $('input[name="email"]').val(),
         password = $('input[name="password"]').val(),
-        password_confirm = $('input[name="password_confirm"]').val(),
-        fullName = $('input[name="fullName"]').val();
+        passwordConfirm = $('input[name="passwordConfirm"]').val(),
+        fullName = $('input[name="fullName"]').val(),
         select = $('select[name="select"]').val();
-
-
-    // let formData = new formData();
-    // formData.append('email', email);
-    // formData.append('password', password);
-    // formData.append('password_confirm', password_confirm);
-    // formData.append('fullName', fullName);
-    // formData.append('select', select);
-
 
     $.ajax({
         url: '../vendor/signup.php',
@@ -68,7 +59,7 @@ $('.btnRegister').click(function (event) {
         data: {
             email: email,
             password: password,
-            password_confirm: password_confirm,
+            passwordConfirm: passwordConfirm,
             fullName: fullName,
             select: select
         },

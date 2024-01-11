@@ -4,39 +4,59 @@
     box-sizing: border-box;
 }
 body {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Montserrar, sans-serif;
+    font-size: 15px;
+    width: 99.98vw;
+    height: 99.98vh;
+    background:
+            linear-gradient(217deg, rgba(16, 113, 181, 0.9), rgba(255, 0, 0, 0) 70.71%),
+            linear-gradient(127deg, rgba(243, 66, 19, 0.5), rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(222, 145, 81, 0.4), rgba(0, 0, 255, 0) 70.71%);
+    border-left: 0.01vw solid rgba(243, 66, 19, 0.5);
+    border-right: 0.01vw solid rgba(16, 113, 181, 0.9);
+    border-top: 0.01vh solid rgba(16, 113, 181, 0.9);
+    border-bottom: 0.01vh solid rgba(222, 145, 81, 0.4);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 450px;
+    background: rgba(255, 255, 255, 0.192);
+    backdrop-filter: blur(100px);
+    border-radius: 15px;
 }
 a {
-    color: #7c9ab7;
+    color: #1071B5;
     font-weight: bold;
     text-decoration: none;
 }
 p {
     margin: 10px 0;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
+    text-align: center;
 }
 input, select {
     margin: 10px 0;
     padding:  10px;
+    background: transparent;
     border: unset;
-    border-bottom: 2px solid #e3e3e3;
+    border-bottom: 2px solid black;
     outline: none;
+}
+input:-webkit-autofill {
+    background: transparent;
 }
 select {
     width: 100%;
 }
 button {
     padding: 10px;
-    background: #e3e3e3;
+    background: #1071B5;
     border: unset;
+    border-radius: 15px;
     cursor: pointer;
 }
 .error {

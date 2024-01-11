@@ -15,17 +15,20 @@
 </head>
 <body>
 
-    <form>
-        <label>Введите свой Email</label>
-        <input type="email" name="email" placeholder="madi@mail.ru">
-        <label>Введите пароль</label>
-        <input type="password" name="password" placeholder="********">
-        <button type="submit" class="btnEnter">Войти</button>
-        <p>
-            У вас нет аккаунта? - <a href="php/register.php">Зарегистрируйтесь!</a>
-        </p>
-        <p class="msg none">Lorem ipsum dolor sit amet.</p>
-    </form>
+    <div class="container">
+        <form>
+            <label>Введите свой Email</label>
+            <input type="email" name="email" placeholder="madi@mail.ru">
+            <label>Введите пароль</label>
+            <input type="password" name="password" placeholder="********">
+            <button type="submit" class="btnEnter">Войти</button>
+            <p>
+                У вас нет аккаунта? - <a href="php/register.php">Зарегистрируйтесь!</a>
+            </p>
+            <p class="msg none">Lorem ipsum dolor sit amet.</p>
+        </form>
+    </div>
+
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/main.js"></script>
