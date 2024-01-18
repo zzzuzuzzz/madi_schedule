@@ -2,7 +2,7 @@
     session_start();
 
     if (!$_SESSION['user']) {
-        header('Location: ../index.php');
+        header('Location: ../auth.php');
     }
 ?>
 
@@ -17,7 +17,7 @@
     <form>
         <h2><?= $_SESSION['user']['fullName'] ?></h2>
         <h3><?= $_SESSION['user']['email'] ?></h3>
-        <a href="../vendor/logout.php" class="logout">Выход</a>
+        <a href="../vendor/schedulePro/logout.php" class="logout">Выход</a>
     </form>
 </body>
 </html>

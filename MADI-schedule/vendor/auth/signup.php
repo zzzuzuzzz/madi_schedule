@@ -15,7 +15,8 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
     $passwordConfirm = $_POST['passwordConfirm'];
-    $fullName = $_POST['fullName'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
     $select = $_POST['select'];
 
 //    Проверка на сущетсвование пользователя
@@ -53,9 +54,14 @@
         $errorPasswordLen[] = 'passwordConfirm';
     }
 
-//    Обработка ошибок при вводе данных (fullName)
-    if ($fullName === '') {
-        $errorFields[] = 'fullName';
+//    Обработка ошибок при вводе данных (firstName)
+    if ($firstName === '') {
+        $errorFields[] = 'firstName';
+    }
+
+//    Обработка ошибок при вводе данных (lastName)
+    if ($lastName === '') {
+        $errorFields[] = 'lastName';
     }
 
 //    Обработка ошибок при вводе данных (select)
@@ -89,7 +95,7 @@
     if ($password === $passwordConfirm) {
         $password = md5($password);
 
-        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `fullName`, `class`) VALUES ('$email', '$password', '$select', '$fullName', NULL)");
+        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL)");
 
         if (empty($errorFields)) {
             $response = [

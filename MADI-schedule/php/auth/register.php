@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
 <body>
 
@@ -23,8 +23,10 @@
             <input title="Пароль должен состоять не менее чем из 8 символов. Так же в пароле не должно быть специальных символов (!,@,#,$,%,^,&,*,<,>,)." type="password" id="password" placeholder="********" name="password">
             <label for="passwordConfirm">Повторите пароль</label>
             <input title="Пароль должен состоять не менее чем из 8 символов. Так же в пароле не должно быть специальных символов (!,@,#,$,%,^,&,*,<,>,)." type="password" id="passwordConfirm" placeholder="********" name="passwordConfirm">
-            <label for="fullName">Введите свое имя</label>
-            <input type="text" id="fullName" placeholder="Иван Иванович" name="fullName">
+            <label for="firstName">Введите свое имя</label>
+            <input type="text" id="firstName" placeholder="Иван" name="firstName">
+            <label for="lastName">Введите свою фамилию</label>
+            <input type="text" id="lastName" placeholder="Иванович" name="lastName">
             <label>
                 <select name="select">
                     <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
@@ -34,13 +36,13 @@
             </label>
             <button type="submit" class="btnRegister">Зарегестрироваться</button>
             <p>
-                У вас уже есть аккаунт? - <a href="../index.php">Войдите в него!</a>
+                У вас уже есть аккаунт? - <a href="auth.php">Войдите в него!</a>
             </p>
             <p class="msg none">Lorem ipsum.</p>
         </form>
     </div>
 
-    <script src="../assets/js/jquery-3.7.1.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>
