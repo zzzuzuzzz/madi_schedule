@@ -41,7 +41,7 @@ $('.btnEnterToScheduleLite').click(function (event) {
     Авторизация
 */
 
-$('.btnEnter').click(function (event) {
+$('.btnEnterToSchedulePro').click(function (event) {
     event.preventDefault();
 
     $(`input`).removeClass('error')
@@ -50,7 +50,7 @@ $('.btnEnter').click(function (event) {
         password = $('input[name="password"]').val();
 
     $.ajax({
-        url: 'vendor/signin.php',
+        url: '../../vendor/auth/signin.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -60,7 +60,7 @@ $('.btnEnter').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../php/profile.php'
+                document.location.href = '../../php/schedulePro/profile.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
@@ -88,18 +88,20 @@ $('.btnRegister').click(function (event) {
     let email = $('input[name="email"]').val(),
         password = $('input[name="password"]').val(),
         passwordConfirm = $('input[name="passwordConfirm"]').val(),
-        fullName = $('input[name="fullName"]').val(),
+        firstName = $('input[name="firstName"]').val(),
+        lastName = $('input[name="lastName"]').val(),
         select = $('select[name="select"]').val();
 
     $.ajax({
-        url: '../vendor/signup.php',
+        url: '../../vendor/auth/signup.php',
         type: 'POST',
         dataType: 'json',
         data: {
             email: email,
             password: password,
             passwordConfirm: passwordConfirm,
-            fullName: fullName,
+            firstName: firstName,
+            lastName: lastName,
             select: select
         },
         success (data) {
@@ -118,3 +120,103 @@ $('.btnRegister').click(function (event) {
         }
     });
 });
+
+
+/*
+    Востановление пароля
+*/
+
+$('.btnEnterToProof').click(function (event) {
+    event.preventDefault();
+
+    $(`input`).removeClass('error')
+
+    let email = $('input[name="email"]').val();
+
+    $.ajax({
+        url: '../../vendor/auth/forgotPassword.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            email: email
+        },
+        success (data) {
+
+            if (data.status) {
+                document.location.href = '../../php/auth/proof.php'
+            } else {
+                if (data.type === 1) {
+                    data.fields.forEach(function (field) {
+                        $(`input[name="${field}"]`).addClass('error');
+                    })
+                }
+                $('.msg').removeClass('none').text(data.message);
+            }
+        }
+    });
+});
+$('.btnEnterToChangePassword').click(function (event) {
+    event.preventDefault();
+
+    $(`input`).removeClass('error')
+
+    let codeProof = $('input[name="codeProof"]').val();
+
+    $.ajax({
+        url: '../../vendor/auth/proof.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            codeProof: codeProof
+        },
+        success (data) {
+
+            if (data.status) {
+                document.location.href = '../../php/auth/changePassword.php'
+            } else {
+                if (data.type === 1) {
+                    data.fields.forEach(function (field) {
+                        $(`input[name="${field}"]`).addClass('error');
+                    })
+                }
+                $('.msg').removeClass('none').text(data.message);
+            }
+        }
+    });
+});
+$('.btnEnterToAuthFromChangePassword').click(function (event) {
+    event.preventDefault();
+
+    $(`input`).removeClass('error')
+
+    let password = $('input[name="password"]').val(),
+        passwordConfirm = $('input[name="passwordConfirm"]').val();
+
+    $.ajax({
+        url: '../../vendor/auth/changePassword.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            password: password,
+            passwordConfirm: passwordConfirm,
+        },
+        success (data) {
+
+            if (data.status) {
+                document.location.href = '../../php/auth/auth.php'
+            } else {
+                if (data.type === 1) {
+                    data.fields.forEach(function (field) {
+                        $(`input[name="${field}"]`).addClass('error');
+                    })
+                }
+                $('.msg').removeClass('none').text(data.message);
+            }
+        }
+    });
+});
+
+
+$('.btnEnterToAuth').click(function () {
+    document.location.href = '../../php/auth/auth.php'
+})

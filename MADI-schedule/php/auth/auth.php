@@ -1,8 +1,11 @@
 <?php
     session_start();
 
-    if ($_SESSION['profile']) {
-        header('Location: ../schedulePro/scheduleTeacher.php');
+    if (!$_SESSION['user'] && $_SESSION['profile']) {
+        header('Location: ../schedulePro/profile.php');
+    } else if ($_SESSION['user'] && $_SESSION['profile']) {
+        unset($_SESSION['user']);
+        header('Location: ../schedulePro/profile.php');
     }
 ?>
 
@@ -21,9 +24,12 @@
             <input type="email" name="email" placeholder="madi@mail.ru">
             <label>Введите пароль</label>
             <input type="password" name="password" placeholder="********">
-            <button type="submit" class="btnEnter">Войти</button>
+            <button type="submit" class="btnEnterToSchedulePro">Войти</button>
             <p>
                 У вас нет аккаунта? - <a href="register.php">Зарегистрируйтесь!</a>
+            </p>
+            <p>
+                <a href="forgotPassword.php">Забыли пароль?</a>
             </p>
             <p class="msg none">Lorem ipsum dolor sit amet.</p>
         </form>

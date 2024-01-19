@@ -11,7 +11,7 @@
 
     $errorFields = [];
 
-    if ($email === '') {
+    if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errorFields[] = 'email';
     }
     if ($password === '') {

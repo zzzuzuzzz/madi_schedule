@@ -1,8 +1,11 @@
 <?php
     session_start();
 
-    if ($_SESSION['user']) {
-        header('Location: profile.php');
+    if (!$_SESSION['user'] && $_SESSION['profile']) {
+        header('Location: ../schedulePro/profile.php');
+    } else if ($_SESSION['user'] && $_SESSION['profile']) {
+        unset($_SESSION['user']);
+        header('Location: ../schedulePro/profile.php');
     }
 ?>
 

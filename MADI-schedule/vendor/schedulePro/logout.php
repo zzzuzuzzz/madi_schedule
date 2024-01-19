@@ -1,4 +1,4 @@
 <?php
     session_start();
-    unset($_SESSION['user']);
-    header('Location: ../auth.php');
+    unset($_SESSION['profile']);
+    header('Location: ../../index.php');
