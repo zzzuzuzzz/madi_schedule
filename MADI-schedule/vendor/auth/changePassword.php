@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect = mysqli_connect('localhost', 'admin', 'ijhyu13113', 'madi');
+$connect = mysqli_connect('192.168.1.74', 'admin', 'ijhyu13113', 'madi');
 
 if (!$connect) {
     die ("Error connect to DataBase");
@@ -8,7 +8,7 @@ if (!$connect) {
 
 $password = $_POST['password'];
 $passwordConfirm = $_POST['passwordConfirm'];
-$email = $_SESSION['codeFromEmail']['email'];
+$email = strval($_SESSION['codeFromEmail']['email']);
 
 $errorFields = [];
 $errorPasswordLen =[];
@@ -50,7 +50,7 @@ if (!empty($errorPasswordLen)) {
 if ($password === $passwordConfirm) {
     $password = md5($password);
 
-    mysqli_query($connect, "INSERT INTO `madiAuth` `password` VALUE '$password' WHERE `email` = '$email'");
+    mysqli_query($connect, "UPDATE `madiAuth` SET `password` = '$password' WHERE `email` = '$email'");
 
     if (empty($errorFields)) {
         unset($_SESSION['codeFromEmail']);

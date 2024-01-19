@@ -22,7 +22,7 @@ if (!empty($errorFields)) {
 
 $codeProofFromSession = $_SESSION['codeFromEmail']['codeProof'];
 
-if ($codeProofFromSession === $codeProof) {
+if (strval($codeProofFromSession) === strval($codeProof)) {
 
     $response = [
         "status" => true

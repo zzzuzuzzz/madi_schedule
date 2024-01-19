@@ -21,6 +21,7 @@ if (!$_SESSION['codeFromEmail']) {
         <input type="text" name="codeProof" placeholder="1528">
         <button type="submit" class="btnEnterToChangePassword">Продолжить</button>
         <p class="msg none">Lorem ipsum dolor sit amet.</p>
+        <?php echo $_SESSION['codeFromEmail']['codeProof'] ?>
     </form>
 </div>
 
