@@ -21,12 +21,11 @@ if (!$_SESSION['codeFromEmail']) {
         <input type="text" name="codeProof" placeholder="1528">
         <button type="submit" class="btnEnterToChangePassword">Продолжить</button>
         <p class="msg none">Lorem ipsum dolor sit amet.</p>
-        <?php echo $_SESSION['codeFromEmail']['codeProof'] ?>
     </form>
 </div>
 
 
 <script src="../../assets/js/jquery-3.7.1.min.js"></script>
-<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/auth/forgotPassword.js"></script>
 </body>
 </html>

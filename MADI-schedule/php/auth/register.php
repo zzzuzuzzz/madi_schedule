@@ -2,10 +2,10 @@
     session_start();
 
     if (!$_SESSION['user'] && $_SESSION['profile']) {
-        header('Location: ../schedulePro/profile.php');
+        header('Location: ../schedulePro/schedule.php');
     } else if ($_SESSION['user'] && $_SESSION['profile']) {
         unset($_SESSION['user']);
-        header('Location: ../schedulePro/profile.php');
+        header('Location: ../schedulePro/schedule.php');
     }
 ?>
 
@@ -46,6 +46,6 @@
     </div>
 
     <script src="../../assets/js/jquery-3.7.1.min.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/auth/singup.js"></script>
 </body>
 </html>

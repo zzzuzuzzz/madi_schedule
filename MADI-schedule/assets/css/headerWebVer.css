@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 40px;
+    height: 40px;
+}
+.header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(15, 1fr);
+    padding: 10px;
+    border-bottom: solid 1px #0e0e0e;
+}
+.schedule {
+    grid-column: 2;
+}
+.task {
+    grid-column: 4;
+}
+.logo {
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+.chat {
+    grid-column: 12;
+}
+.profile {
+    grid-column: 14;
+}
+.madiLogo {
+    width: 100px;
+}
+.btnHeader {
+    background-color: transparent;
+    border: transparent;
+}
+.container {
+    width: 100%;
+    border-bottom: 1px black solid;
+}
+.calendarBlock {
+    text-align: center;
+}
+#calendar {
+    display: inline-block;
+}
