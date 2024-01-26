@@ -17,7 +17,11 @@ $('.btnEnterToSchedulePro').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../php/schedulePro/schedule.php'
+                if (data.type === 2) {
+                    document.location.href = '../../../php/schedulePro/teacher/scheduleTeacher.php'
+                } else if (data.type === 3) {
+                    document.location.href = '../../../php/schedulePro/student/scheduleStudent.php'
+                }
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

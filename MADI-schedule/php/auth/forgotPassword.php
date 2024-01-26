@@ -1,11 +1,16 @@
 <?php
 session_start();
 
-if (!$_SESSION['user'] && $_SESSION['profile']) {
-    header('Location: ../schedulePro/schedule.php');
-} else if ($_SESSION['user'] && $_SESSION['profile']) {
+if (!$_SESSION['user'] && $_SESSION['profileStudent']) {
+    header('Location: ../schedulePro/student/scheduleStudent.php');
+} else if (!$_SESSION['user'] && $_SESSION['profileTeacher']) {
+    header('Location: ../schedulePro/teacher/scheduleTeacher.php');
+} else if ($_SESSION['user'] && $_SESSION['profileStudent']) {
     unset($_SESSION['user']);
-    header('Location: ../schedulePro/schedule.php');
+    header('Location: ../schedulePro/student/scheduleStudent.php');
+} else if ($_SESSION['user'] && $_SESSION['profileTeacher']) {
+    unset($_SESSION['user']);
+    header('Location: ../schedulePro/teacher/scheduleTeacher.php');
 }
 ?>
 

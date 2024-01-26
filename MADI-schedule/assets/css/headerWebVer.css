@@ -8,6 +8,7 @@ img {
     height: 40px;
 }
 .header {
+    height: 15vh;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(15, 1fr);
@@ -45,5 +46,5 @@ img {
     text-align: center;
 }
 #calendar {
-    display: inline-block;
+    /*display: inline-block;*/
 }

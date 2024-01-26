@@ -4,12 +4,12 @@
     if (!$_SESSION['user'] && !$_SESSION['profile']) {
         header('Location: ../../index.php');
     } else if (!$_SESSION['user'] && $_SESSION['profile']) {
-        header('Location: ../schedulePro/schedule.php');
+        header('Location: ../schedulePro/scheduleTeacher.php');
     } else if ($_SESSION['user'] && !$_SESSION['profile']) {
-        header('Location: schedule.php');
+        header('Location: scheduleTeacher.php');
     } else if ($_SESSION['user'] && $_SESSION['profile']) {
         unset($_SESSION['user']);
-        header('Location: ../schedulePro/schedule.php');
+        header('Location: ../schedulePro/scheduleTeacher.php');
     }
 ?>
 

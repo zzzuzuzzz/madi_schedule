@@ -1,13 +1,19 @@
 <?php
     session_start();
-
-    if (!$_SESSION['user'] && $_SESSION['profile']) {
-        header('Location: php/schedulePro/schedule.php');
-    } else if ($_SESSION['user'] && !$_SESSION['profile']) {
-        header('Location: php/scheduleLite/schedule.php');
-    } else if ($_SESSION['user'] && $_SESSION['profile']) {
+//unset($_SESSION['profileTeacher']);
+//unset($_SESSION['profileStudent']);
+    if (!$_SESSION['user'] && $_SESSION['profileStudent']) {
+        header('Location: php/schedulePro/student/scheduleStudent.php');
+    } else if (!$_SESSION['user'] && $_SESSION['profileTeacher']) {
+        header('Location: php/schedulePro/teacher/scheduleTeacher.php');
+    } else if ($_SESSION['user'] && $_SESSION['profileStudent']) {
         unset($_SESSION['user']);
-        header('Location: php/schedulePro/schedule.php');
+        header('Location: php/schedulePro/student/scheduleStudent.php');
+    } else if ($_SESSION['user'] && $_SESSION['profileTeacher']) {
+        unset($_SESSION['user']);
+        header('Location: php/schedulePro/teacher/scheduleTeacher.php');
+    } else if (($_SESSION['user'] && !$_SESSION['profileTeacher']) || ($_SESSION['user'] && !$_SESSION['profileStudent'])) {
+        header('Location: php/scheduleLite/scheduleTeacher.php');
     }
 ?>
 
