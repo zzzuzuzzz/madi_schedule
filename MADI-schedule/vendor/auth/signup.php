@@ -5,7 +5,7 @@
 //    Подключение к БД
 //    $connect = require_once ('../connect.php');
 
-    $connect = mysqli_connect('localhost', 'admin', 'ijhyu13113', 'madi');
+    $connect = mysqli_connect('192.168.1.74', 'admin', 'ijhyu13113', 'madi');
 
 //    Обработка ошибки подключения к БД
     if (!$connect) {
@@ -20,6 +20,7 @@
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $select = $_POST['select'];
+    $emailProof = false;
 
 //    Проверка на сущетсвование пользователя
     $checkUser = mysqli_query($connect, "SELECT * FROM `madiAuth` WHERE `email` = '$email'");
@@ -97,9 +98,16 @@
     if ($password === $passwordConfirm) {
         $password = md5($password);
 
-        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL)");
+        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`, `emailProof`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL, '$emailProof')");
 
         if (empty($errorFields)) {
+
+            $_SESSION['emailProof'] = [
+                'email' => $email
+            ];
+
+            mail($email, 'Подтверждение почты', "Благодарим Вас за регистрацию. Пожалуйста <a href=\"http://192.168.1.74/php/auth/emailProof.php\">Нажмите сюда!</a>");
+
             $response = [
                 "status" => true,
                 "message" => "Вы успешно зарегестрировались",

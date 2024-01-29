@@ -44,13 +44,13 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
 
     <div class="containerWithProfileInfoAndSetting">
         <div class="profileInfo">
-            <img src="../../../assets/img/svg/iconProfile.svg" alt="Автарка" class="avatar">
-            <p class="lastName"><?= strval($_SESSION['profileTeacher']['lastName']) ?></p>
-            <p class="firstName"><?= strval($_SESSION['profileTeacher']['firstName']) ?></p>
-            <p>Ваша почта</p>
-            <p class="email"><?= strval($_SESSION['profileTeacher']['email']) ?></p>
-            <p>Ваш факультет</p>
-            <p class="class">
+            <img src="../../../assets/img/svg/iconProfile.svg" alt="Автарка" class="avatar varInProfileInfo">
+            <h2 class="lastName varInProfileInfo"><?= strval($_SESSION['profileTeacher']['lastName']) ?></h2>
+            <h3 class="firstName varInProfileInfo"><?= strval($_SESSION['profileTeacher']['firstName']) ?></h3>
+            <p class="pEmail varInProfileInfo">Ваша почта</p>
+            <p class="email varInProfileInfo"><?= strval($_SESSION['profileTeacher']['email']) ?></p>
+            <p class="pClass varInProfileInfo">Ваш факультет</p>
+            <p class="class varInProfileInfo">
                 <?php
                 $class = 'Вы не выбрали факультет';
                 if ($_SESSION['profileTeacher']['class']) {
@@ -59,33 +59,56 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 echo $class;
                 ?>
             </p>
-            <form>
-                <label>
-                    <select name="select">
+            <form class="selectClassForm">
+                <label class="select varInProfileInfo">
+                    <select name="select" class="select">
                         <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
-                        <option value="9401">Автомобильный транспорт (АТФ)</option>
-                        <option value="9405">Дорожно-строительный (ДСФ)</option>
-                        <option value="9402">Дорожные и технологические машины (ФДМ)</option>
-                        <option value="9403">Конструкторско-механический (КМФ)</option>
-                        <option value="9404">Энерго-экологический (ЭЭФ)</option>
-                        <option value="9405">Логистика и общетранспортные проблемы (ФЛ)</option>
-                        <option value="9402">Управление (ФУ)</option>
-                        <option value="9403">Экономический (ЭФ)</option>
-                        <option value="9404">Заочный (ЗФ)</option>
+                        <option value="ATF">Автомобильный транспорт (АТФ)</option>
+                        <option value="DSF">Дорожно-строительный (ДСФ)</option>
+                        <option value="FDM">Дорожные и технологические машины (ФДМ)</option>
+                        <option value="KMD">Конструкторско-механический (КМФ)</option>
+                        <option value="EEF">Энерго-экологический (ЭЭФ)</option>
+                        <option value="FL">Логистика и общетранспортные проблемы (ФЛ)</option>
+                        <option value="FU">Управление (ФУ)</option>
+                        <option value="EF">Экономический (ЭФ)</option>
+                        <option value="ZF">Заочный (ЗФ)</option>
                     </select>
                 </label>
-                <button class="saveClassVar">Сохранить</button>
+                <button class="saveClassVar varInProfileInfo">Сохранить</button>
             </form>
-            <form>
-                <a href="../../../vendor/schedulePro/logout.php" class="logout">Выход</a>
+            <form class="logoutForm">
+                <a href="../../../vendor/schedulePro/logout.php" class="logout varInProfileInfo">Выйти из аккаунта</a>
             </form>
         </div>
         <div class="setting">
-            <p>настройки</p>
+            <form class="lbLanguage">
+                <label for="language">Сменить язык</label>
+                <label class="select">
+                    <select name="selectLanguage" id="language">
+                        <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
+                        <option value="ru">Русский язык</option>
+                        <option value="en">Англиский язык</option>
+                        <option value="uz">Узбекский язык</option>
+                    </select>
+                </label>
+                <button class="saveLanguage">Сохранить</button>
+            </form>
+            <form class="lbBackground">
+                <label for="background">Сменить тему</label>
+                <label class="select">
+                    <select name="selectBackground" id="background">
+                        <option value="white">Светлая тема</option>
+                        <option value="black">Темная тема</option>
+                    </select>
+                </label>
+                <button class="saveBackground">Сохранить</button>
+            </form>
         </div>
+        <p class="msg none">Lorem ipsum dolor sit amet.</p>
     </div>
 
     <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
     <script src="../../../assets/js/schedulePro/teacher/headerTeacher.js"></script>
+    <script src="../../../assets/js/schedulePro/teacher/saveTeacher.js"></script>
 </body>
 </html>
