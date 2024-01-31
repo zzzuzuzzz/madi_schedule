@@ -1,13 +1,7 @@
 <?php
     session_start();
 
-//    include ('../connect.php');
-
-    $connect = mysqli_connect('192.168.1.74', 'admin', 'ijhyu13113', 'madi');
-
-    if (!$connect) {
-        die ("Error connect to DataBase");
-    }
+    include "../blocks/connect.php";
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -39,7 +33,7 @@
 
         $user = mysqli_fetch_assoc($checkUser);
 
-        if ($user['emailProof'] === false) {
+        if (strval($user['emailProof']) === "false") {
             $response = [
                 "status" => false,
                 "message" => 'Вы не подтвердили почту. Пожалуйста, перейдите в Ваш почтовый ящик и подтвердите его'
@@ -48,16 +42,24 @@
             echo json_encode($response);
         } else {
             if ($user['work'] == 'teacher') {
+
+                $select = $user['class'];
+                include "../blocks/switchClassTeacher.php";
+
                 $_SESSION['profileTeacher'] = [
                     'firstName' => $user['firstName'],
                     'lastName' => $user['lastName'],
                     'email' => $user['email'],
-                    'class' => $user['class']
+                    'class' => $select,
+                    'language' => $user['language'],
+                    'background' => $user['background']
                 ];
                 $response = [
                     "type" => 2,
                     "status" => true
                 ];
+
+
             } else if ($user['work'] == 'student') {
                 $_SESSION['profileStudent'] = [
                     'firstName' => $user['firstName'],

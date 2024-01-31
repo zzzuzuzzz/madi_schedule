@@ -1,17 +1,11 @@
 <?php
 session_start();
 
-//    include ('../connect.php');
-
-$connect = mysqli_connect('192.168.1.74', 'admin', 'ijhyu13113', 'madi');
-
-if (!$connect) {
-    die ("Error connect to DataBase");
-}
+include "../blocks/connect.php";
 
 $email = strval($_SESSION['emailProof']['email']);
 
-mysqli_query($connect, "UPDATE `madiAuth` SET `emailProof` = True WHERE `email` = '$email'");
+mysqli_query($connect, "UPDATE `madiAuth` SET `emailProof` = 'true' WHERE `email` = '$email'");
 
 $response = [
     "status" => true

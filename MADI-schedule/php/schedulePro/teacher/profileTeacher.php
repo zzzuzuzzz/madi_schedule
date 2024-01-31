@@ -19,31 +19,15 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
 </head>
 <body>
 
-    <div class="header">
-        <button class="schedule btnHeader">
-            <img src="../../../assets/img/svg/iconSchedule.svg" alt="Иконка расписания">
-            <p>Расписание</p>
-        </button>
-        <button class="task btnHeader">
-            <img src="../../../assets/img/svg/iconTask.svg" alt="Иконка заданий">
-            <p>Задания</p>
-        </button>
-        <button class="logo btnHeader">
-            <img src="../../../assets/img/svg/iconMadi.svg" alt="Логотип МАДИ" class="madiLogo">
-            <p>Расписание МАДИ</p>
-        </button>
-        <button class="chat btnHeader">
-            <img src="../../../assets/img/svg/iconChat.svg" alt="Иконка чата">
-            <p>Чат и контакты</p>
-        </button>
-        <button class="profile btnHeader">
-            <img src="../../../assets/img/svg/iconProfile.svg" alt="Иконка профиля">
-            <p>Ваш профиль</p>
-        </button>
-    </div>
+<?php
+    include "../../../assets/htmlBlocks/buttons.php"
+?>
 
-    <div class="containerWithProfileInfoAndSetting">
+<div class="containerWithProfileInfoAndSetting">
+
         <div class="profileInfo">
+
+
             <img src="../../../assets/img/svg/iconProfile.svg" alt="Автарка" class="avatar varInProfileInfo">
             <h2 class="lastName varInProfileInfo"><?= strval($_SESSION['profileTeacher']['lastName']) ?></h2>
             <h3 class="firstName varInProfileInfo"><?= strval($_SESSION['profileTeacher']['firstName']) ?></h3>
@@ -59,9 +43,10 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 echo $class;
                 ?>
             </p>
+
             <form class="selectClassForm">
-                <label class="select varInProfileInfo">
-                    <select name="select" class="select">
+                <label class="varInProfileInfo">
+                    <select name="selectClass" class="select">
                         <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
                         <option value="ATF">Автомобильный транспорт (АТФ)</option>
                         <option value="DSF">Дорожно-строительный (ДСФ)</option>
@@ -76,14 +61,20 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 </label>
                 <button class="saveClassVar varInProfileInfo">Сохранить</button>
             </form>
+
+
             <form class="logoutForm">
                 <a href="../../../vendor/schedulePro/logout.php" class="logout varInProfileInfo">Выйти из аккаунта</a>
             </form>
+
+
         </div>
         <div class="setting">
-            <form class="lbLanguage">
+
+
+            <form class="selectLanguageForm">
                 <label for="language">Сменить язык</label>
-                <label class="select">
+                <label>
                     <select name="selectLanguage" id="language">
                         <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
                         <option value="ru">Русский язык</option>
@@ -91,20 +82,27 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                         <option value="uz">Узбекский язык</option>
                     </select>
                 </label>
-                <button class="saveLanguage">Сохранить</button>
+                <button class="saveLanguageVar">Сохранить</button>
             </form>
-            <form class="lbBackground">
+
+
+            <form class="selectBackgroundForm">
                 <label for="background">Сменить тему</label>
-                <label class="select">
+                <label>
                     <select name="selectBackground" id="background">
+                        <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>
                         <option value="white">Светлая тема</option>
                         <option value="black">Темная тема</option>
                     </select>
                 </label>
-                <button class="saveBackground">Сохранить</button>
+                <button class="saveBackgroundVar">Сохранить</button>
             </form>
+
+
         </div>
+
         <p class="msg none">Lorem ipsum dolor sit amet.</p>
+
     </div>
 
     <script src="../../../assets/js/jquery-3.7.1.min.js"></script>

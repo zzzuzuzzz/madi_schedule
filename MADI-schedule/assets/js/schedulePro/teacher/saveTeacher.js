@@ -1,12 +1,12 @@
 $('.saveClassVar').click(function (event) {
     event.preventDefault();
 
-    $(`select`).removeClass('error')
+    $(`selectClass`).removeClass('error')
 
-    let select = $('select[name="select"]').val();
+    let select = $('select[name="selectClass"]').val();
 
     $.ajax({
-        url: '../../../vendor/schedulePro/teacher/profileVendorTeacher.php',
+        url: '../../../vendor/schedulePro/teacher/profileVendorTeacherClassVar.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -28,12 +28,12 @@ $('.saveClassVar').click(function (event) {
     });
 });
 
-$('.saveLanguage').click(function (event) {
+$('.saveLanguageVar').click(function (event) {
     event.preventDefault();
 
-    $(`select`).removeClass('error')
+    $(`selectLanguage`).removeClass('error')
 
-    let select = $('select[name="select"]').val();
+    let select = $('select[name="selectLanguage"]').val();
 
     $.ajax({
         url: '../../../vendor/schedulePro/teacher/profileSettingTeacherLanguage.php',
@@ -58,12 +58,12 @@ $('.saveLanguage').click(function (event) {
     });
 });
 
-$('.saveBackground').click(function (event) {
+$('.saveBackgroundVar').click(function (event) {
     event.preventDefault();
 
-    $(`select`).removeClass('error')
+    $(`selectBackground`).removeClass('error')
 
-    let select = $('select[name="select"]').val();
+    let select = $('select[name="selectBackground"]').val();
 
     $.ajax({
         url: '../../../vendor/schedulePro/teacher/profileSettingTeacherBackground.php',

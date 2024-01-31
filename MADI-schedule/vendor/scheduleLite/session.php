@@ -1,7 +1,7 @@
 <?php
     session_start();
 //    Подключение к БД
-    $connect = mysqli_connect('192.168.1.74', 'admin', 'ijhyu13113', 'madi');
+    $connect = mysqli_connect('localhost', 'admin', 'ijhyu13113', 'madi');
 
 //    Обработка ошибки подключения к БД
     if (!$connect) {

@@ -1,12 +1,14 @@
 <?php
 session_start();
 
+include "../../blocks/connect.php";
+
 $select = $_POST['select'];
 
 $errorFields = [];
 
 if ($select === '') {
-    $errorFields[] = 'select';
+    $errorFields[] = 'selectLanguage';
 }
 
 if (!empty($errorFields)) {
@@ -21,10 +23,23 @@ if (!empty($errorFields)) {
 
 } else if (empty($errorFields)) {
 
-    $_SESSION['profileTeacher'] = [
-        'language' => $select
-    ];
+    $email = strval($_SESSION['profileTeacher']['email']);
+    $firstName = strval($_SESSION['profileTeacher']['firstName']);
+    $lastName = strval($_SESSION['profileTeacher']['lastName']);
+    $class = strval($_SESSION['profileTeacher']['class']);
+    $background = strval($_SESSION['profileTeacher']['background']);
 
+
+    mysqli_query($connect, "UPDATE `madiAuth` SET `language`= '$select' WHERE `email` = '$email'");
+
+    $_SESSION['profileTeacher'] = [
+        'class' => $class,
+        'firstName' => $firstName,
+        'lastName' => $lastName,
+        'email' => $email,
+        'language' => $select,
+        'background' => $background
+    ];
     $response = [
         "status" => true
     ];

@@ -2,16 +2,7 @@
 //    Начало сесии
     session_start();
 
-//    Подключение к БД
-//    $connect = require_once ('../connect.php');
-
-    $connect = mysqli_connect('192.168.1.74', 'admin', 'ijhyu13113', 'madi');
-
-//    Обработка ошибки подключения к БД
-    if (!$connect) {
-        die ("Error connect to DataBase");
-    }
-
+    include "../blocks/connect.php";
 
 //    Получение из HTML формы данных и запись в переменные
     $email = $_POST['email'];
@@ -20,7 +11,9 @@
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $select = $_POST['select'];
-    $emailProof = false;
+    $emailProof = "false";
+    $language = "ru";
+    $background = "white";
 
 //    Проверка на сущетсвование пользователя
     $checkUser = mysqli_query($connect, "SELECT * FROM `madiAuth` WHERE `email` = '$email'");
@@ -98,7 +91,7 @@
     if ($password === $passwordConfirm) {
         $password = md5($password);
 
-        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`, `emailProof`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL, '$emailProof')");
+        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`, `emailProof`, `language`, `background`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL, '$emailProof', '$language', '$background')");
 
         if (empty($errorFields)) {
 
