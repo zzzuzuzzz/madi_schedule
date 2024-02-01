@@ -15,6 +15,13 @@
     <title>Расписание</title>
     <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
     <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
+    <?php
+    if (strval($_SESSION['profileTeacher']['background']) === "white") {
+        include "../../../assets/htmlBlocks/whiteCSS.html";
+    } else if (strval($_SESSION['profileTeacher']['background']) === "black") {
+        include "../../../assets/htmlBlocks/blackCSS.html";
+    }
+    ?>
 </head>
 <body>
 
