@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $codeProof = $_POST['codeProof'];
 
@@ -20,7 +19,7 @@ if (!empty($errorFields)) {
     die();
 }
 
-$codeProofFromSession = $_SESSION['codeFromEmail']['codeProof'];
+$codeProofFromSession = $_COOKIE['codeProof'];
 
 if (strval($codeProofFromSession) === strval($codeProof)) {
 

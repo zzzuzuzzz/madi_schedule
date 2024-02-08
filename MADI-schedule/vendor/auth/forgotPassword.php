@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include "../blocks/connect.php";
 
@@ -28,10 +27,8 @@ if (mysqli_num_rows($checkUser) > 0) {
 
     $codeProof = rand(1000, 10000);
 
-    $_SESSION['codeFromEmail'] = [
-        'codeProof' => $codeProof,
-        'email' => $email
-    ];
+    setcookie('codeProof', $codeProof, time()+86400*30*12, '/');
+    setcookie('email', $email, time()+86400*30*12, '/');
 
     mail($email, 'Восстановление пароля', "Добрый день! Введите в поле на нашем сайте следующие число для востановления пароля! {$codeProof}");
 

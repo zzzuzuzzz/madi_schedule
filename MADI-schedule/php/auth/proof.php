@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-if (!$_SESSION['codeFromEmail']) {
+if (!$_COOKIE['codeFromEmail']) {
     header('Location: auth.php');
 }
 ?>

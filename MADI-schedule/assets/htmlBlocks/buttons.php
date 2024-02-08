@@ -3,7 +3,7 @@
         <img src="../../../assets/img/svg/iconSchedule.svg" alt="Иконка расписания">
         <p>
             <?php
-            $language = strval($_SESSION['profileTeacher']['language']);
+            $language = $_COOKIE['language'];
             if ($language === 'ru') {
                 echo "Расписание";
             } else if ($language === 'en') {
@@ -18,7 +18,7 @@
         <img src="../../../assets/img/svg/iconTask.svg" alt="Иконка заданий">
         <p>
             <?php
-            $language = strval($_SESSION['profileTeacher']['language']);
+            $language = $_COOKIE['language'];
             if ($language === 'ru') {
                 echo "Задания";
             } else if ($language === 'en') {
@@ -33,7 +33,7 @@
         <img src="../../../assets/img/svg/iconMadi.svg" alt="Логотип МАДИ" class="madiLogo">
         <p>
             <?php
-            $language = strval($_SESSION['profileTeacher']['language']);
+            $language = $_COOKIE['language'];
             if ($language === 'ru') {
                 echo "Расписание МАДИ";
             } else if ($language === 'en') {
@@ -48,7 +48,7 @@
         <img src="../../../assets/img/svg/iconChat.svg" alt="Иконка чата">
         <p>
             <?php
-            $language = strval($_SESSION['profileTeacher']['language']);
+            $language = $_COOKIE['language'];
             if ($language === 'ru') {
                 echo "Чат и контакты";
             } else if ($language === 'en') {
@@ -63,7 +63,7 @@
         <img src="../../../assets/img/svg/iconProfile.svg" alt="Иконка профиля">
         <p>
             <?php
-            $language = strval($_SESSION['profileTeacher']['language']);
+            $language = $_COOKIE['language'];
             if ($language === 'ru') {
                 echo "Ваш профиль";
             } else if ($language === 'en') {

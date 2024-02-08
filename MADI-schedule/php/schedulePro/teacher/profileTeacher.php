@@ -1,9 +1,8 @@
 <?php
-session_start();
 
-if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
-    header('Location: ../../scheduleLite/scheduleTeacher.php');
-} else if (!$_SESSION['user'] && !$_SESSION['profileTeacher']) {
+if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
+    header('Location: ../scheduleLite/scheduleTeacher.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
     header('Location: ../../../index.php');
 }
 ?>
@@ -14,7 +13,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
     <meta charset="UTF-8">
     <title>
         <?php
-        $language = strval($_SESSION['profileTeacher']['language']);
+        $language = strval($_COOKIE['language']);
         if ($language === 'ru') {
             echo "Ваш профиль";
         } else if ($language === 'en') {
@@ -28,9 +27,9 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
     <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
     <link rel="stylesheet" href="../../../assets/css/schedulePro/profile.css">
     <?php
-    if (strval($_SESSION['profileTeacher']['background']) === "white") {
+    if (strval($_COOKIE['background']) === "white") {
         include "../../../assets/htmlBlocks/whiteCSS.html";
-    } else if (strval($_SESSION['profileTeacher']['background']) === "black") {
+    } else if (strval($_COOKIE['background']) === "black") {
         include "../../../assets/htmlBlocks/blackCSS.html";
     }
     ?>
@@ -47,11 +46,11 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
 
 
             <img src="../../../assets/img/svg/iconProfile.svg" alt="Автарка" class="avatar varInProfileInfo">
-            <h2 class="lastName varInProfileInfo"><?= strval($_SESSION['profileTeacher']['lastName']) ?></h2>
-            <h3 class="firstName varInProfileInfo"><?= strval($_SESSION['profileTeacher']['firstName']) ?></h3>
+            <h2 class="lastName varInProfileInfo"><?= strval($_COOKIE['lastName']) ?></h2>
+            <h3 class="firstName varInProfileInfo"><?= strval($_COOKIE['firstName']) ?></h3>
             <p class="pEmail varInProfileInfo">
                 <?php
-                $language = strval($_SESSION['profileTeacher']['language']);
+                $language = strval($_COOKIE['language']);
                 if ($language === 'ru') {
                     echo "Ваша почта";
                 } else if ($language === 'en') {
@@ -61,10 +60,10 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 }
                 ?>
             </p>
-            <p class="email varInProfileInfo"><?= strval($_SESSION['profileTeacher']['email']) ?></p>
+            <p class="email varInProfileInfo"><?= strval($_COOKIE['email']) ?></p>
             <p class="pClass varInProfileInfo">
                 <?php
-                $language = strval($_SESSION['profileTeacher']['language']);
+                $language = strval($_COOKIE['language']);
                 if ($language === 'ru') {
                     echo "Ваш факультет";
                 } else if ($language === 'en') {
@@ -77,7 +76,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
             <p class="class varInProfileInfo">
                 <?php
                 $class = 'Вы не выбрали факультет';
-                $language = strval($_SESSION['profileTeacher']['language']);
+                $language = strval($_COOKIE['language']);
                 if ($language === 'ru') {
                     $class = "Вы не выбрали факультет";
                 } else if ($language === 'en') {
@@ -85,8 +84,8 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 } else if ($language === 'uz') {
                     $class = "темная тема";
                 }
-                if ($_SESSION['profileTeacher']['class']) {
-                    $class = strval($_SESSION['profileTeacher']['class']);
+                if ($_COOKIE['class']) {
+                    $class = strval($_COOKIE['class']);
                 }
                 echo $class;
                 ?>
@@ -97,7 +96,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                     <select name="selectClass" class="select">
                         <option name="unvalue" value="unvalue" selected disabled>
                             <?php
-                            $language = strval($_SESSION['profileTeacher']['language']);
+                            $language = strval($_COOKIE['language']);
                             if ($language === 'ru') {
                                 echo "Выберете нужный варинат";
                             } else if ($language === 'en') {
@@ -120,7 +119,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 </label>
                 <button class="saveClassVar varInProfileInfo">
                     <?php
-                    $language = strval($_SESSION['profileTeacher']['language']);
+                    $language = strval($_COOKIE['language']);
                     if ($language === 'ru') {
                         echo "Сохранить";
                     } else if ($language === 'en') {
@@ -136,7 +135,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
             <form class="logoutForm">
                 <a href="../../../vendor/schedulePro/logout.php" class="logout varInProfileInfo">
                     <?php
-                    $language = strval($_SESSION['profileTeacher']['language']);
+                    $language = strval($_COOKIE['language']);
                     if ($language === 'ru') {
                         echo "Выйти из аккаунта";
                     } else if ($language === 'en') {
@@ -164,7 +163,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 <form class="selectLanguageForm">
                     <label for="language">
                         <?php
-                        $language = strval($_SESSION['profileTeacher']['language']);
+                        $language = strval($_COOKIE['language']);
                         if ($language === 'ru') {
                             echo "Сменить язык";
                         } else if ($language === 'en') {
@@ -178,7 +177,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                         <select name="selectLanguage" id="language">
                             <option name="unvalue" value="unvalue" selected disabled>
                                 <?php
-                                $language = strval($_SESSION['profileTeacher']['language']);
+                                $language = strval($_COOKIE['language']);
                                 if ($language === 'ru') {
                                     echo "Выберете нужный варинат";
                                 } else if ($language === 'en') {
@@ -195,7 +194,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                     </label>
                     <button class="saveLanguageVar">
                         <?php
-                        $language = strval($_SESSION['profileTeacher']['language']);
+                        $language = strval($_COOKIE['language']);
                         if ($language === 'ru') {
                             echo "Сохранить";
                         } else if ($language === 'en') {
@@ -213,8 +212,8 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
 
                 <p class="backgroundInfo">
                     <?php
-                        $language = strval($_SESSION['profileTeacher']['language']);
-                        $background = strval($_SESSION['profileTeacher']['background']);
+                        $language = strval($_COOKIE['language']);
+                        $background = strval($_COOKIE['background']);
                         if ($language === 'ru') {
                             if ($background === 'white') {
                                 echo "Сейчас у Вас стоит светлая тема";
@@ -240,7 +239,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                 <form class="selectBackgroundForm">
                     <label for="background">
                         <?php
-                        $language = strval($_SESSION['profileTeacher']['language']);
+                        $language = strval($_COOKIE['language']);
                         if ($language === 'ru') {
                             echo "Сменить тему";
                         } else if ($language === 'en') {
@@ -254,7 +253,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                         <select name="selectBackground" id="background">
                             <option name="unvalue" value="unvalue" selected disabled>
                                 <?php
-                                $language = strval($_SESSION['profileTeacher']['language']);
+                                $language = strval($_COOKIE['language']);
                                 if ($language === 'ru') {
                                     echo "Выберете нужный варинат";
                                 } else if ($language === 'en') {
@@ -266,7 +265,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                             </option>
                             <option value="white">
                                 <?php
-                                $language = strval($_SESSION['profileTeacher']['language']);
+                                $language = strval($_COOKIE['language']);
                                 if ($language === 'ru') {
                                     echo "Светлая тема";
                                 } else if ($language === 'en') {
@@ -278,7 +277,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                             </option>
                             <option value="black">
                                 <?php
-                                $language = strval($_SESSION['profileTeacher']['language']);
+                                $language = strval($_COOKIE['language']);
                                 if ($language === 'ru') {
                                     echo "Темная тема";
                                 } else if ($language === 'en') {
@@ -292,7 +291,7 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
                     </label>
                     <button class="saveBackgroundVar">
                         <?php
-                        $language = strval($_SESSION['profileTeacher']['language']);
+                        $language = strval($_COOKIE['language']);
                         if ($language === 'ru') {
                             echo "Сохранить";
                         } else if ($language === 'en') {

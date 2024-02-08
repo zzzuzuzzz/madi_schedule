@@ -1,9 +1,8 @@
 <?php
-session_start();
 
-if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
+if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
     header('Location: ../scheduleLite/scheduleTeacher.php');
-} else if (!$_SESSION['user'] && !$_SESSION['profileTeacher']) {
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
     header('Location: ../../../index.php');
 }
 ?>
@@ -16,9 +15,9 @@ if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
     <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
     <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
     <?php
-    if (strval($_SESSION['profileTeacher']['background']) === "white") {
+    if (strval($_COOKIE['background']) === "white") {
         include "../../../assets/htmlBlocks/whiteCSS.html";
-    } else if (strval($_SESSION['profileTeacher']['background']) === "black") {
+    } else if (strval($_COOKIE['background']) === "black") {
         include "../../../assets/htmlBlocks/blackCSS.html";
     }
     ?>

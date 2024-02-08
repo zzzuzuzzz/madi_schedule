@@ -1,11 +1,10 @@
 <?php
-session_start();
 
 include "../blocks/connect.php";
 
 $password = $_POST['password'];
 $passwordConfirm = $_POST['passwordConfirm'];
-$email = strval($_SESSION['codeFromEmail']['email']);
+$email = strval($_COOKIE['email']);
 
 $errorFields = [];
 $errorPasswordLen =[];
@@ -50,7 +49,8 @@ if ($password === $passwordConfirm) {
     mysqli_query($connect, "UPDATE `madiAuth` SET `password` = '$password' WHERE `email` = '$email'");
 
     if (empty($errorFields)) {
-        unset($_SESSION['codeFromEmail']);
+        setcookie('codeProof', '', -1, '/');
+        setcookie('email', '', -1, '/');
         $response = [
             "status" => true,
             "message" => "Пароль успешно изменен",

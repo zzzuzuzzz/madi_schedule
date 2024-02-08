@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include "../../blocks/connect.php";
 
@@ -23,23 +22,10 @@ if (!empty($errorFields)) {
 
 } else if (empty($errorFields)) {
 
-    $email = strval($_SESSION['profileTeacher']['email']);
-    $firstName = strval($_SESSION['profileTeacher']['firstName']);
-    $lastName = strval($_SESSION['profileTeacher']['lastName']);
-    $class = strval($_SESSION['profileTeacher']['class']);
-    $background = strval($_SESSION['profileTeacher']['background']);
-
-
     mysqli_query($connect, "UPDATE `madiAuth` SET `language`= '$select' WHERE `email` = '$email'");
 
-    $_SESSION['profileTeacher'] = [
-        'class' => $class,
-        'firstName' => $firstName,
-        'lastName' => $lastName,
-        'email' => $email,
-        'language' => $select,
-        'background' => $background
-    ];
+    setcookie('language', $select, time()+86400*30*12, '/');
+
     $response = [
         "status" => true
     ];

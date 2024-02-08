@@ -1,15 +1,14 @@
 <?php
-session_start();
 
-if (!$_SESSION['user'] && $_SESSION['profileStudent']) {
+if (!$_COOKIE['user'] && $_COOKIE['profileStudent']) {
     header('Location: ../schedulePro/student/scheduleStudent.php');
-} else if (!$_SESSION['user'] && $_SESSION['profileTeacher']) {
+} else if (!$_COOKIE['user'] && $_COOKIE['profileTeacher']) {
     header('Location: ../schedulePro/teacher/scheduleTeacher.php');
-} else if ($_SESSION['user'] && $_SESSION['profileStudent']) {
-    unset($_SESSION['user']);
+} else if ($_COOKIE['user'] && $_COOKIE['profileStudent']) {
+    setcookie('user', '', -1, '/');
     header('Location: ../schedulePro/student/scheduleStudent.php');
-} else if ($_SESSION['user'] && $_SESSION['profileTeacher']) {
-    unset($_SESSION['user']);
+} else if ($_COOKIE['user'] && $_COOKIE['profileTeacher']) {
+    setcookie('user', '', -1, '/');
     header('Location: ../schedulePro/teacher/scheduleTeacher.php');
 }
 ?>

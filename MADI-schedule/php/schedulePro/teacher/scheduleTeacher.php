@@ -1,9 +1,8 @@
 <?php
-    session_start();
 
-    if ($_SESSION['user'] && !$_SESSION['profileTeacher']) {
+    if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
         header('Location: ../scheduleLite/scheduleTeacher.php');
-    } else if (!$_SESSION['user'] && !$_SESSION['profileTeacher']) {
+    } else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
         header('Location: ../../../index.php');
     }
 ?>
@@ -15,30 +14,27 @@
     <title>Расписание</title>
     <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
     <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
+
     <?php
-    if (strval($_SESSION['profileTeacher']['background']) === "white") {
+    if (strval($_COOKIE['background']) === "white") {
         include "../../../assets/htmlBlocks/whiteCSS.html";
-    } else if (strval($_SESSION['profileTeacher']['background']) === "black") {
+    } else if (strval($_COOKIE['background']) === "black") {
         include "../../../assets/htmlBlocks/blackCSS.html";
     }
     ?>
 </head>
 <body>
 
-<?php
-include "../../../assets/htmlBlocks/buttons.php"
-?>
+    <?php
+        include "../../../assets/htmlBlocks/buttons.php"
+    ?>
 
-<div class="container">
+    <div class="container">
         <div class="calendarBlock">
             <div id="calendar"></div>
         </div>
     </div>
 
-<!--    <form>-->
-<!---->
-<!--    <a href="../../vendor/schedulePro/logout.php" class="logout">Выход</a>-->
-<!--    </form>-->
     <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
     <script src="../../../assets/js/air-datepicker.js"></script>
     <script>

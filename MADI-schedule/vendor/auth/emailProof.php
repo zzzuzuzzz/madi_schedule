@@ -1,9 +1,8 @@
 <?php
-session_start();
 
 include "../blocks/connect.php";
 
-$email = strval($_SESSION['emailProof']['email']);
+$email = $_COOKIE['emailProof'];
 
 mysqli_query($connect, "UPDATE `madiAuth` SET `emailProof` = 'true' WHERE `email` = '$email'");
 
@@ -11,6 +10,6 @@ $response = [
     "status" => true
 ];
 
-unset($_SESSION['emailProof']);
+setcookie('emailProof', '', -1, '/');
 
 echo json_encode($response);

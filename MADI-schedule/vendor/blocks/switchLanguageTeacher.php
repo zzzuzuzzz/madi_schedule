@@ -1,7 +1,7 @@
 <?php
 
 $language = 'язык';
-$sessionLanguage = strval($_SESSION['profileTeacher']['language']);
+$sessionLanguage = strval($_COOKIE['language']);
 
 switch ($sessionLanguage) {
     case "ru":
