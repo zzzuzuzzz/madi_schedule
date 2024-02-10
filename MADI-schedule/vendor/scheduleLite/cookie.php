@@ -1,14 +1,6 @@
 <?php
-    session_start();
-//    Подключение к БД
-    $connect = mysqli_connect('localhost', 'admin', 'ijhyu13113', 'madi');
 
-//    Обработка ошибки подключения к БД
-    if (!$connect) {
-        die ("Error connect to DataBase");
-    }
-
-    $select = $_POST['select'];
+$select = $_POST['select'];
 
     $errorFields = [];
 
@@ -27,10 +19,16 @@
         ];
         echo json_encode($response);
         die();
+
     } else {
+
         $response = [
             "status" => true,
         ];
+
+        setcookie('user', 'True', time() + 60 * 60 * 24 * 30 * 12, '/');
+        setcookie('class', $select, time() + 60 * 60 * 24 * 30 * 12, '/');
+
         echo json_encode($response);
     }
 

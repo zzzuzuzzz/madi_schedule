@@ -1,9 +1,13 @@
 <?php
 
 if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
-    header('Location: ../scheduleLite/scheduleTeacher.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
+    header('Location: ../../scheduleLite/schedule.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && !$_COOKIE['profileStudent']) {
     header('Location: ../../../index.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && $_COOKIE['profileStudent']) {
+    header('Location: ../student/scheduleStudent.php');
+} else if ($_COOKIE['user'] && $_COOKIE["profileTeacher"]) {
+    setcookie('user', '', -1, '/');
 }
 ?>
 
@@ -156,8 +160,20 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
 
                 <p class="languageInfo">
                     <?php
-                        include "../../../vendor/blocks/switchLanguageTeacher.php"
-                    ?>
+                    $language = 'язык';
+                    $sessionLanguage = strval($_COOKIE['language']);
+                    switch ($sessionLanguage) {
+                        case "ru":
+                            $language = 'Сейчас у Вас стоит Русский язык';
+                            break;
+                        case "en":
+                            $language = 'The English language is now available';
+                            break;
+                        case "uz":
+                            $language = 'Узбекский язык';
+                            break;
+                    }
+                    echo $language;                    ?>
                 </p>
 
                 <form class="selectLanguageForm">

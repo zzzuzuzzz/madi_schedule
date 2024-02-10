@@ -1,8 +1,4 @@
-$('.btnEnterToAuth').click(function () {
-    document.location.href = '../../php/auth/auth.php'
-})
-
-$('.btnEnterToScheduleLite').click(function (event) {
+$('.btnChangeClassInScheduleLite').click(function (event) {
     event.preventDefault();
 
     $(`select`).removeClass('error')
@@ -10,7 +6,7 @@ $('.btnEnterToScheduleLite').click(function (event) {
     let select = $('select[name="select"]').val();
 
     $.ajax({
-        url: 'vendor/scheduleLite/cookie.php',
+        url: '../../vendor/scheduleLite/changeClass.php',
         type: 'POST',
         dataType: 'json',
         data: {

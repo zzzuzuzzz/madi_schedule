@@ -10,6 +10,10 @@ if (!$_COOKIE['user'] && $_COOKIE['profileStudent']) {
 } else if ($_COOKIE['user'] && $_COOKIE['profileTeacher']) {
     setcookie('user', '', -1, '/');
     header('Location: php/schedulePro/teacher/scheduleTeacher.php');
+} else if ($_COOKIE['user'] && !$_COOKIE['profileStudent']) {
+    header('Location: php/scheduleLite/schedule.php');
+} else if ($_COOKIE['user'] && !$_COOKIE['profileTeacher']) {
+    header('Location: php/scheduleLite/schedule.php');
 }
 ?>
 

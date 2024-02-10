@@ -7,7 +7,7 @@ $select = $_POST['select'];
 $errorFields = [];
 
 if ($select === '') {
-    $errorFields[] = 'selectBackground';
+    $errorFields[] = 'selectLanguage';
 }
 
 if (!empty($errorFields)) {
@@ -22,9 +22,11 @@ if (!empty($errorFields)) {
 
 } else if (empty($errorFields)) {
 
-    mysqli_query($connect, "UPDATE `madiAuth` SET `background`= '$select' WHERE `email` = '$email'");
+    $email = strval($_COOKIE['email']);
 
-    setcookie('background', $select, time()+86400*30*12, '/');
+    mysqli_query($connect, "UPDATE `madiAuth` SET `language`= '$select' WHERE `email` = '$email'");
+
+    setcookie('language', $select, time()+86400*30*12, '/');
 
     $response = [
         "status" => true

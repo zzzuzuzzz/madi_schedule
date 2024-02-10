@@ -1,10 +1,14 @@
 <?php
 
-    if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
-        header('Location: ../scheduleLite/scheduleTeacher.php');
-    } else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
-        header('Location: ../../../index.php');
-    }
+if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
+    header('Location: ../../scheduleLite/schedule.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && !$_COOKIE['profileStudent']) {
+    header('Location: ../../../index.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && $_COOKIE['profileStudent']) {
+    header('Location: ../student/scheduleStudent.php');
+} else if ($_COOKIE['user'] && $_COOKIE["profileTeacher"]) {
+    setcookie('user', '', -1, '/');
+}
 ?>
 
 <!doctype html>

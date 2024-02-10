@@ -7,7 +7,7 @@ $select = $_POST['select'];
 $errorFields = [];
 
 if ($select === '') {
-    $errorFields[] = 'selectClass';
+    $errorFields[] = 'selectBackground';
 }
 
 if (!empty($errorFields)) {
@@ -24,11 +24,9 @@ if (!empty($errorFields)) {
 
     $email = strval($_COOKIE['email']);
 
-    mysqli_query($connect, "UPDATE `madiAuth` SET `class`= '$select' WHERE `email` = '$email'");
+    mysqli_query($connect, "UPDATE `madiAuth` SET `background`= '$select' WHERE `email` = '$email'");
 
-    include "../../blocks/switchClassTeacher.php";
-
-    setcookie('class', $select, time()+86400*30*12, '/');
+    setcookie('background', $select, time()+86400*30*12, '/');
 
     $response = [
         "status" => true

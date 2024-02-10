@@ -26,7 +26,7 @@ if (!empty($errorFields)) {
 
     mysqli_query($connect, "UPDATE `madiAuth` SET `class`= '$select' WHERE `email` = '$email'");
 
-    include "../../blocks/switchClassTeacher.php";
+    include "../../blocks/switchClassStudent.php";
 
     setcookie('class', $select, time()+86400*30*12, '/');
 

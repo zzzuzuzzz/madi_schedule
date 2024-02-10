@@ -1,13 +1,11 @@
 <?php
 
-include "../../blocks/connect.php";
-
 $select = $_POST['select'];
 
 $errorFields = [];
 
 if ($select === '') {
-    $errorFields[] = 'selectLanguage';
+    $errorFields[] = 'select';
 }
 
 if (!empty($errorFields)) {
@@ -22,9 +20,7 @@ if (!empty($errorFields)) {
 
 } else if (empty($errorFields)) {
 
-    mysqli_query($connect, "UPDATE `madiAuth` SET `language`= '$select' WHERE `email` = '$email'");
-
-    setcookie('language', $select, time()+86400*30*12, '/');
+    setcookie('class', $select, time()+86400*30*12, '/');
 
     $response = [
         "status" => true

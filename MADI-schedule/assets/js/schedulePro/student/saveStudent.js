@@ -6,7 +6,7 @@ $('.saveClassVar').click(function (event) {
     let select = $('select[name="selectClass"]').val();
 
     $.ajax({
-        url: '../../../vendor/schedulePro/teacher/profileVendorTeacherClassVar.php',
+        url: '../../../vendor/schedulePro/student/profileVendorStudentClassVar.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -15,7 +15,7 @@ $('.saveClassVar').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/teacher/profileTeacher.php'
+                document.location.href = '../../../php/schedulePro/student/profileStudent.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
@@ -45,7 +45,7 @@ $('.saveLanguageVar').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/teacher/profileTeacher.php'
+                document.location.href = '../../../php/schedulePro/student/profileStudent.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
@@ -75,7 +75,7 @@ $('.saveBackgroundVar').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/teacher/profileTeacher.php'
+                document.location.href = '../../../php/schedulePro/student/profileStudent.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

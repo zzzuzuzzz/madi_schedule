@@ -1,10 +1,13 @@
 <?php
-session_start();
 
-if ($_SESSION['user'] && !$_SESSION['profileStudent']) {
-    header('Location: ../scheduleLite/scheduleTeacher.php');
-} else if (!$_SESSION['user'] && !$_SESSION['profileStudent']) {
+if ($_COOKIE['user'] && !$_COOKIE["profileStudent"]) {
+    header('Location: ../../scheduleLite/schedule.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileStudent"] && !$_COOKIE['profileTeacher']) {
     header('Location: ../../../index.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profileStudent"] && $_COOKIE['profileTeacher']) {
+    header('Location: ../teacher/scheduleTeacher.php');
+} else if ($_COOKIE['user'] && $_COOKIE["profileStudent"]) {
+    setcookie('user', '', -1, '/');
 }
 ?>
 
@@ -12,40 +15,23 @@ if ($_SESSION['user'] && !$_SESSION['profileStudent']) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Контакты</title>
+    <title>Чат и контакты</title>
     <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
     <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
+    <?php
+    if (strval($_COOKIE['background']) === "white") {
+        include "../../../assets/htmlBlocks/whiteCSS.html";
+    } else if (strval($_COOKIE['background']) === "black") {
+        include "../../../assets/htmlBlocks/blackCSS.html";
+    }
+    ?>
 </head>
 <body>
 
-<div class="header">
-    <button class="schedule btnHeader">
-        <img src="../../../assets/img/svg/iconSchedule.svg" alt="Иконка расписания">
-        <p>Расписание</p>
-    </button>
-    <button class="task btnHeader">
-        <img src="../../../assets/img/svg/iconTask.svg" alt="Иконка заданий">
-        <p>Задания</p>
-    </button>
-    <button class="logo btnHeader">
-        <img src="../../../assets/img/svg/iconMadi.svg" alt="Логотип МАДИ" class="madiLogo">
-        <p>Расписание МАДИ</p>
-    </button>
-    <button class="chat btnHeader">
-        <img src="../../../assets/img/svg/iconChat.svg" alt="Иконка чата">
-        <p>Чат и контакты</p>
-    </button>
-    <button class="profile btnHeader">
-        <img src="../../../assets/img/svg/iconProfile.svg" alt="Иконка профиля">
-        <p>Ваш профиль</p>
-    </button>
-</div>
+<?php
+    include "../../../assets/htmlBlocks/buttons.php"
+?>
 
-
-<!--    <form>-->
-<!---->
-<!--    <a href="../../vendor/schedulePro/logout.php" class="logout">Выход</a>-->
-<!--    </form>-->
 <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
 <script src="../../../assets/js/schedulePro/student/headerStudent.js"></script>
 </body>
