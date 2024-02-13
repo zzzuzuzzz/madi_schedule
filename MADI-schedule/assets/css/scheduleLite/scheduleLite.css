@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.error {
+    border-bottom: 2px solid red;
+}
+.msg {
+    border: 2px solid #c20e0e;
+    border-radius: 15px;
+    background: #ffc4c4;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.none {
+    display: none;
+}
+.logout {
+    color: #c20e0e;
+}
