@@ -58,10 +58,8 @@
             } else if ($user['work'] == 'student') {
 
 
-//                НУЖНО СДЕЛАТЬ ПЕЕРЕВОДЧИК НАЗВАНИЯ ГРУППЫ С sql НА PHP
                 $select = $user['class'];
-                include "../blocks/switchClassTeacher.php";
-//                НУЖНО СДЕЛАТЬ ПЕЕРЕВОДЧИК НАЗВАНИЯ ГРУППЫ С sql НА PHP
+                include "../blocks/switchClassStudent.php";
 
                 setcookie('profileStudent', $true, time()+86400*30*12, '/');
                 setcookie('class', $select, time()+86400*30*12, '/');
@@ -77,6 +75,7 @@
             setcookie('email', $user['email'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('language', $user['language'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('background', $user['background'], time() + 60 * 60 * 24 * 30 * 12, '/');
+            setcookie('avatar', $user['avatar'], time() + 60 * 60 * 24 * 30 * 12, '/');
 
             echo json_encode($response);
         }

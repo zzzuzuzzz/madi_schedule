@@ -89,7 +89,7 @@
     if ($password === $passwordConfirm) {
         $password = md5($password);
 
-        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`, `emailProof`, `language`, `background`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL, '$emailProof', '$language', '$background')");
+        mysqli_query($connect, "INSERT INTO `madiAuth` (`email`, `password`, `work`, `firstName`, `lastName`, `class`, `avatar`, `emailProof`, `language`, `background`) VALUES ('$email', '$password', '$select', '$firstName', '$lastName', NULL, NULL, '$emailProof', '$language', '$background')");
 
         if (empty($errorFields)) {
 

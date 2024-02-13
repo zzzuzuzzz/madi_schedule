@@ -30,6 +30,7 @@ if ($_COOKIE['user'] && !$_COOKIE["profileStudent"]) {
     <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
     <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
     <link rel="stylesheet" href="../../../assets/css/schedulePro/profile.css">
+    <link rel="stylesheet" href="../../../assets/css/schedulePro/popup.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
         include "../../../assets/htmlBlocks/whiteCSS.html";
@@ -48,8 +49,30 @@ if ($_COOKIE['user'] && !$_COOKIE["profileStudent"]) {
 
         <div class="profileInfo">
 
+            <img src="<?php
+            if (strval($_COOKIE['avatar']) == NULL) {
+                echo "../../../assets/img/svg/iconProfile.svg";
+            } else {
+                echo "../../../" . strval($_COOKIE['avatar']);
+            }
+            ?>" alt="Автарка" id="avatar" class="avatar varInProfileInfo">
 
-            <img src="../../../assets/img/svg/iconProfile.svg" alt="Автарка" class="avatar varInProfileInfo">
+            <div id="popup" class="popup">
+                <div class="popup_content">
+                    <div class="popup_header">
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="popup_body">
+                        <form class="popup_body_div">
+                            <input type="file" class="avatarInput" name="avatar">
+                            <button class="btnSaveAvatar">Сохранить</button>
+                            <p class="msg none">Lorem ipsum dolor sit amet.</p>
+                        </form>
+                    </div>
+                    <div class="popup_footer"></div>
+                </div>
+            </div>
+
             <h2 class="lastName varInProfileInfo"><?= strval($_COOKIE['lastName']) ?></h2>
             <h3 class="firstName varInProfileInfo"><?= strval($_COOKIE['firstName']) ?></h3>
             <p class="pEmail varInProfileInfo">
@@ -680,5 +703,7 @@ if ($_COOKIE['user'] && !$_COOKIE["profileStudent"]) {
     <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
     <script src="../../../assets/js/schedulePro/student/headerStudent.js"></script>
     <script src="../../../assets/js/schedulePro/student/saveStudent.js"></script>
+    <script src="../../../assets/js/schedulePro/student/popup.js"></script>
+    <script src="../../../assets/js/schedulePro/student/avatar.js"></script>
 </body>
 </html>

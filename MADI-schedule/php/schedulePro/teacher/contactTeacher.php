@@ -25,12 +25,12 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
         include "../../../assets/htmlBlocks/blackCSS.html";
     }
     ?>
-    <link rel="stylesheet" href="../../../assets/css/schedulePro/chatTeacher.css">
+    <link rel="stylesheet" href="../../../assets/css/schedulePro/contactTeacher.css">
 </head>
 <body>
 
 <?php
-    include "../../../assets/htmlBlocks/buttons.php"
+include "../../../assets/htmlBlocks/buttons.php"
 ?>
 
 <div class="container">
@@ -45,12 +45,13 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
         </div>
         <div class="info">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores debitis dolores ducimus iure, nemo nesciunt odit porro! Consequatur, error!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores debitis dolores ducimus iure, nemo nesciunt odit porro! Consequatur, error!</p>
         </div>
     </div>
 </div>
 
 <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
 <script src="../../../assets/js/schedulePro/teacher/headerTeacher.js"></script>
-<script src="../../../assets/js/schedulePro/teacher/chatTeacher.js"></script>
+<script src="../../../assets/js/schedulePro/teacher/contactTeacher.js"></script>
 </body>
 </html>
