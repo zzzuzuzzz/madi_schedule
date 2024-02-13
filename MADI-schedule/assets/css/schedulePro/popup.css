@@ -1,0 +1,70 @@
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btnSaveAvatar {
+    width: 100%;
+    margin-top: 2px;
+    border-radius: 12px;
+    border: #0e0e0e 1px solid;
+}
+.popup_header {
+    background-color: #1071B5;
+    color: black;
+    display: flex;
+    padding: 2px 16px;
+}
+.popup_body {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.popup_footer {
+    height: 32px;
+    padding: 2px 16px;
+    background-color: #1071B5;
+}
+
+.popup_content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 180px auto auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animetetop;
+    animation-duration: 0.4s;
+}
+
+@keyframes animetetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
