@@ -70,12 +70,16 @@
                 ];
             }
 
+            setcookie('id', $user['id'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('firstName', $user['firstName'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('lastName', $user['lastName'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('email', $user['email'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('language', $user['language'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('background', $user['background'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('avatar', $user['avatar'], time() + 60 * 60 * 24 * 30 * 12, '/');
+
+            $id = strval($user['id']);
+            mysqli_query($connect, "CREATE TABLE IF NOT EXISTS `$id` (`id` INT NOT NULL AUTO_INCREMENT, `friendList` INT, `toList` INT, `fromList` INT, PRIMARY KEY(`id`))");
 
             echo json_encode($response);
         }

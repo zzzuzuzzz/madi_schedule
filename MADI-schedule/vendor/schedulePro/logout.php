@@ -10,5 +10,7 @@
     setcookie('email', '', -1, '/');
     setcookie('language', '', -1, '/');
     setcookie('background', '', -1, '/');
+    setcookie('id', '', -1, '/');
 
-    header('Location: ../../index.php');
+
+header('Location: ../../index.php');

@@ -43,8 +43,13 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
                 <p class="pInContainer pContact">Контакты</p>
             </div>
         </div>
-        <div class="info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores debitis dolores ducimus iure, nemo nesciunt odit porro! Consequatur, error!</p>
+        <div class="containerWithFriendsAndChat">
+            <div class="friendsField">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, doloribus?
+            </div>
+            <div class="chatField">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ex?
+            </div>
         </div>
     </div>
 </div>
