@@ -13,7 +13,7 @@ $('.btnSaveAvatar').click(function (e) {
     formData.append('avatar', avatar);
 
     $.ajax({
-        url: '../../../../vendor/blocks/popup.php',
+        url: '../../vendor/schedulePro/profile/popup.php',
         type: 'POST',
         dataType: 'json',
         processData: false,
@@ -23,7 +23,7 @@ $('.btnSaveAvatar').click(function (e) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../../php/schedulePro/student/profileStudent.php';
+                document.location.href = '../../../php/schedulePro/profile.php';
             } else {
 
                 if (data.type === 1) {

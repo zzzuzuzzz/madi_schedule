@@ -3,7 +3,7 @@ $('.sqlResultButtonToFriends').click(function (event) {
     let id = this.id
 
     $.ajax({
-        url: '../../../../vendor/schedulePro/teacher/connectToFriend.php',
+        url: '../../../../vendor/schedulePro/connectToFriend.php',
         type: 'POST',
         dataType: 'json',
         data: {

@@ -1,18 +1,11 @@
 <?php
 
-if (!$_COOKIE['user'] && $_COOKIE['profileStudent']) {
-    header('Location: ../schedulePro/student/scheduleStudent.php');
-} else if (!$_COOKIE['user'] && $_COOKIE['profileTeacher']) {
-    header('Location: ../schedulePro/teacher/scheduleTeacher.php');
-} else if ($_COOKIE['user'] && $_COOKIE['profileStudent']) {
+if (!$_COOKIE['user'] && $_COOKIE['profile']) {
+    header('Location: ../schedulePro/schedule.php');
+} else if ($_COOKIE['user'] && $_COOKIE['profile']) {
     setcookie('user', '', -1, '/');
-    header('Location: ../schedulePro/student/scheduleStudent.php');
-} else if ($_COOKIE['user'] && $_COOKIE['profileTeacher']) {
-    setcookie('user', '', -1, '/');
-    header('Location: ../schedulePro/teacher/scheduleTeacher.php');
-} else if ($_COOKIE['user'] && !$_COOKIE['profileStudent']) {
-    header('Location: ../scheduleLite/schedule.php');
-} else if ($_COOKIE['user'] && !$_COOKIE['profileTeacher']) {
+    header('Location: ../schedulePro/schedule.php');
+} else if ($_COOKIE['user'] && !$_COOKIE['profile']) {
     header('Location: ../scheduleLite/schedule.php');
 }
 ?>

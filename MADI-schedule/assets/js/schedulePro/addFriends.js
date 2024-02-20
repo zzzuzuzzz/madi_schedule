@@ -1,5 +1,5 @@
 $('.pChat').click(function () {
-    document.location.href = '../../../../php/schedulePro/teacher/chatTeacher.php'
+    document.location.href = '../../../php/schedulePro/chat.php'
 })
 
 $('.sqlResultButtonFromList').click(function (event) {
@@ -7,7 +7,7 @@ $('.sqlResultButtonFromList').click(function (event) {
     let id = this.id
 
     $.ajax({
-        url: '../../../../vendor/schedulePro/teacher/addFriends.php',
+        url: '../../vendor/schedulePro/addFriends.php',
         type: 'POST',
         dataType: 'json',
         data: {

@@ -1,6 +1,6 @@
 <?php
 
-include "../../blocks/connect.php";
+include "../connect.php";
 
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];

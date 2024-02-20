@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/MADI-schedule/vendor/auth/signin.php" dialect="MySQL" />
   </component>
 </project>

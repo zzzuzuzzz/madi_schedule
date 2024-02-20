@@ -1,6 +1,6 @@
 <?php
 
-    include "../blocks/connect.php";
+    include "../schedulePro/connect.php";
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -44,13 +44,12 @@
             if ($user['work'] == 'teacher') {
 
                 $select = $user['class'];
-                include "../blocks/switchClassTeacher.php";
+                include "../schedulePro/profile/switchClassTeacher.php";
 
-                setcookie('profileTeacher', $true, time() + 60 * 60 * 24 * 30 * 12, '/');
+                setcookie('work', 'teacher', time() + 60 * 60 * 24 * 30 * 12, '/');
                 setcookie('class', $select, time() + 60 * 60 * 24 * 30 * 12, '/');
 
                 $response = [
-                    "type" => 2,
                     "status" => true
                 ];
 
@@ -59,18 +58,18 @@
 
 
                 $select = $user['class'];
-                include "../blocks/switchClassStudent.php";
+                include "../schedulePro/profile/switchClassStudent.php";
 
-                setcookie('profileStudent', $true, time()+86400*30*12, '/');
+                setcookie('work', 'student', time()+86400*30*12, '/');
                 setcookie('class', $select, time()+86400*30*12, '/');
 
                 $response = [
-                    "type" => 3,
                     "status" => true
                 ];
             }
 
             setcookie('id', $user['id'], time() + 60 * 60 * 24 * 30 * 12, '/');
+            setcookie('profile', $true, time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('firstName', $user['firstName'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('lastName', $user['lastName'], time() + 60 * 60 * 24 * 30 * 12, '/');
             setcookie('email', $user['email'], time() + 60 * 60 * 24 * 30 * 12, '/');

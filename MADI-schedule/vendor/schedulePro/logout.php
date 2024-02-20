@@ -11,6 +11,8 @@
     setcookie('language', '', -1, '/');
     setcookie('background', '', -1, '/');
     setcookie('id', '', -1, '/');
+    setcookie('profile', '', -1, '/');
+
 
 
 header('Location: ../../index.php');

@@ -1,6 +1,6 @@
 <?php
 
-    include "../blocks/connect.php";
+include "../schedulePro/connect.php";
 
 //    Получение из HTML формы данных и запись в переменные
     $email = $_POST['email'];

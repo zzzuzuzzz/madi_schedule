@@ -6,7 +6,7 @@ $('.saveClassVar').click(function (event) {
     let select = $('select[name="selectClass"]').val();
 
     $.ajax({
-        url: '../../../vendor/schedulePro/student/profileVendorStudentClassVar.php',
+        url: '../../../vendor/schedulePro/profile/profileVendorClassVar.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -15,7 +15,7 @@ $('.saveClassVar').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/student/profileStudent.php'
+                document.location.href = '../../../php/schedulePro/profile.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
@@ -36,7 +36,7 @@ $('.saveLanguageVar').click(function (event) {
     let select = $('select[name="selectLanguage"]').val();
 
     $.ajax({
-        url: '../../../vendor/schedulePro/forStudentAndTeacher/profileSettingLanguage.php',
+        url: '../../../vendor/schedulePro/profile/profileSettingLanguage.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -45,7 +45,7 @@ $('.saveLanguageVar').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/student/profileStudent.php'
+                document.location.href = '../../../php/schedulePro/profile.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {
@@ -66,7 +66,7 @@ $('.saveBackgroundVar').click(function (event) {
     let select = $('select[name="selectBackground"]').val();
 
     $.ajax({
-        url: '../../../vendor/schedulePro/forStudentAndTeacher/profileSettingBackground.php',
+        url: '../../../vendor/schedulePro/profile/profileSettingBackground.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -75,7 +75,7 @@ $('.saveBackgroundVar').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/student/profileStudent.php'
+                document.location.href = '../../../php/schedulePro/profile.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

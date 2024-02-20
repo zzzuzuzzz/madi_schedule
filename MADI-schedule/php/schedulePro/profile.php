@@ -1,12 +1,10 @@
 <?php
 
-if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
-    header('Location: ../../scheduleLite/schedule.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && !$_COOKIE['profileStudent']) {
-    header('Location: ../../../index.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && $_COOKIE['profileStudent']) {
-    header('Location: ../student/scheduleStudent.php');
-} else if ($_COOKIE['user'] && $_COOKIE["profileTeacher"]) {
+if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
+    header('Location: ../scheduleLite/schedule.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profile"]) {
+    header('Location: ../../index.php');
+} else if ($_COOKIE['user'] && $_COOKIE["profile"]) {
     setcookie('user', '', -1, '/');
 }
 ?>
@@ -27,22 +25,22 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
         }
         ?>
     </title>
-    <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
-    <link rel="stylesheet" href="../../../assets/css/schedulePro/profile.css">
-    <link rel="stylesheet" href="../../../assets/css/schedulePro/popup.css">
+    <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
+    <link rel="stylesheet" href="../../assets/css/headerWebVer.css">
+    <link rel="stylesheet" href="../../assets/css/schedulePro/profile.css">
+    <link rel="stylesheet" href="../../assets/css/schedulePro/popup.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
-        include "../../../assets/htmlBlocks/whiteCSS.html";
+        include "../../assets/htmlBlocks/whiteCSS.html";
     } else if (strval($_COOKIE['background']) === "black") {
-        include "../../../assets/htmlBlocks/blackCSS.html";
+        include "../../assets/htmlBlocks/blackCSS.html";
     }
     ?>
 </head>
 <body>
 
 <?php
-    include "../../../assets/htmlBlocks/buttons.php"
+include "../../assets/htmlBlocks/buttons.php"
 ?>
 
 <div class="containerWithProfileInfoAndSetting">
@@ -51,9 +49,9 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
 
             <img src="<?php
             if (strval($_COOKIE['avatar']) == NULL) {
-                echo "../../../assets/img/svg/iconProfile.svg";
+                echo "../../assets/img/svg/iconProfile.svg";
             } else {
-                echo "../../../" . strval($_COOKIE['avatar']);
+                echo "../../" . strval($_COOKIE['avatar']);
             }
             ?>" alt="Автарка" id="avatar" class="avatar varInProfileInfo">
 
@@ -160,7 +158,7 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
 
 
             <form class="logoutForm">
-                <a href="../../../vendor/schedulePro/logout.php" class="logout varInProfileInfo">
+                <a href="../../vendor/schedulePro/logout.php" class="logout varInProfileInfo">
                     <?php
                     $language = strval($_COOKIE['language']);
                     if ($language === 'ru') {
@@ -349,10 +347,10 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
 
     </div>
 
-    <script src="../../../assets/js/jquery-3.7.1.min.js"></script>
-    <script src="../../../assets/js/schedulePro/teacher/headerTeacher.js"></script>
-    <script src="../../../assets/js/schedulePro/teacher/saveTeacher.js"></script>
-    <script src="../../../assets/js/schedulePro/teacher/popup.js"></script>
-    <script src="../../../assets/js/schedulePro/teacher/avatar.js"></script>
+    <script src="../../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/js/schedulePro/headerButtons.js"></script>
+    <script src="../../assets/js/schedulePro/profileSave.js"></script>
+    <script src="../../assets/js/schedulePro/popup.js"></script>
+    <script src="../../assets/js/schedulePro/avatar.js"></script>
 </body>
 </html>

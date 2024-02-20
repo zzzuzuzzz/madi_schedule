@@ -10,7 +10,7 @@ $('.foundButton').click(function (event) {
         lastName = $('input[name="lastName"]').val();
 
     $.ajax({
-        url: '../../../../vendor/schedulePro/teacher/contactFoundTeacher.php',
+        url: '../../../../vendor/schedulePro/contactFound.php',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -20,7 +20,7 @@ $('.foundButton').click(function (event) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../../php/schedulePro/teacher/addContact.php'
+                document.location.href = '../../../php/schedulePro/addContact.php'
             } else {
                 if (data.type === 1) {
                     data.fields.forEach(function (field) {

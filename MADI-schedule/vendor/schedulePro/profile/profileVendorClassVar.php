@@ -1,13 +1,13 @@
 <?php
 
-include "../../blocks/connect.php";
+include "../connect.php";
 
 $select = $_POST['select'];
 
 $errorFields = [];
 
 if ($select === '') {
-    $errorFields[] = 'selectLanguage';
+    $errorFields[] = 'selectClass';
 }
 
 if (!empty($errorFields)) {
@@ -24,9 +24,11 @@ if (!empty($errorFields)) {
 
     $email = strval($_COOKIE['email']);
 
-    mysqli_query($connect, "UPDATE `madiAuth` SET `language`= '$select' WHERE `email` = '$email'");
+    mysqli_query($connect, "UPDATE `madiAuth` SET `class`= '$select' WHERE `email` = '$email'");
 
-    setcookie('language', $select, time()+86400*30*12, '/');
+    include "switchClassTeacher.php";
+
+    setcookie('class', $select, time()+86400*30*12, '/');
 
     $response = [
         "status" => true

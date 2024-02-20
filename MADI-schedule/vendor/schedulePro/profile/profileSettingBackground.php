@@ -1,6 +1,6 @@
 <?php
 
-include "../../blocks/connect.php";
+include "../connect.php";
 
 $select = $_POST['select'];
 

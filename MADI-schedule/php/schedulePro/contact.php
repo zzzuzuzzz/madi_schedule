@@ -1,12 +1,10 @@
 <?php
 
-if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
-    header('Location: ../../scheduleLite/schedule.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && !$_COOKIE['profileStudent']) {
-    header('Location: ../../../index.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && $_COOKIE['profileStudent']) {
-    header('Location: ../student/scheduleStudent.php');
-} else if ($_COOKIE['user'] && $_COOKIE["profileTeacher"]) {
+if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
+    header('Location: ../scheduleLite/schedule.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profile"]) {
+    header('Location: ../../index.php');
+} else if ($_COOKIE['user'] && $_COOKIE["profile"]) {
     setcookie('user', '', -1, '/');
 }
 ?>
@@ -16,21 +14,21 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
 <head>
     <meta charset="UTF-8">
     <title>Чат и контакты</title>
-    <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
+    <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
+    <link rel="stylesheet" href="../../assets/css/headerWebVer.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
-        include "../../../assets/htmlBlocks/whiteCSS.html";
+        include "../../assets/htmlBlocks/whiteCSS.html";
     } else if (strval($_COOKIE['background']) === "black") {
-        include "../../../assets/htmlBlocks/blackCSS.html";
+        include "../../assets/htmlBlocks/blackCSS.html";
     }
     ?>
-    <link rel="stylesheet" href="../../../assets/css/schedulePro/contactTeacher.css">
+    <link rel="stylesheet" href="../../assets/css/schedulePro/contactTeacher.css">
 </head>
 <body>
 
 <?php
-include "../../../assets/htmlBlocks/buttons.php"
+include "../../assets/htmlBlocks/buttons.php"
 ?>
 
 <div class="container">
@@ -50,7 +48,7 @@ include "../../../assets/htmlBlocks/buttons.php"
             <div class="contactField">
                 <?php
 
-                include "../../../vendor/blocks/connect.php";
+                include "../../vendor/blocks/connect.php";
 
                 $idUser = $_COOKIE['id'];
 
@@ -92,11 +90,11 @@ include "../../../assets/htmlBlocks/buttons.php"
                             } else {
                                 if ($work == 'teacher') {
                                     $select = $class;
-                                    include "../../../vendor/blocks/switchClassTeacher.php";
+                                    include "../../vendor/blocks/switchClassTeacher.php";
                                     $class = $select;
                                 } else if ($work == 'student') {
                                     $select = $class;
-                                    include "../../../vendor/blocks/switchClassStudent.php";
+                                    include "../../vendor/blocks/switchClassStudent.php";
                                     $class = $select;
                                 }
                             }
@@ -110,7 +108,7 @@ include "../../../assets/htmlBlocks/buttons.php"
                             echo "
                             <div class='sqlResultFromList'>
                                 <div class='sqlResultFromListAvatar'>
-                                    <img src=../../../" . $avatar . " alt='Аватар' class='avatar'>
+                                    <img src=../../" . $avatar . " alt='Аватар' class='avatar'>
                                 </div>
                                 <div class='sqlResultFromListFirstName'><p>" . $firstName . "</p></div>
                                 <div class='sqlResultFromListLastName'><p>" . $lastName . "</p></div>
@@ -156,11 +154,11 @@ include "../../../assets/htmlBlocks/buttons.php"
                             } else {
                                 if ($work == 'teacher') {
                                     $select = $class;
-                                    include "../../../vendor/blocks/switchClassTeacher.php";
+                                    include "../../vendor/blocks/switchClassTeacher.php";
                                     $class = $select;
                                 } else if ($work == 'student') {
                                     $select = $class;
-                                    include "../../../vendor/blocks/switchClassStudent.php";
+                                    include "../../vendor/blocks/switchClassStudent.php";
                                     $class = $select;
                                 }
                             }
@@ -174,7 +172,7 @@ include "../../../assets/htmlBlocks/buttons.php"
                             echo "
                             <div class='sqlResultFriends'>
                                 <div class='sqlResultFriendsAvatar'>
-                                    <img src=../../../" . $avatar . " alt='Аватар' class='avatar'>
+                                    <img src=../../" . $avatar . " alt='Аватар' class='avatar'>
                                 </div>
                                 <div class='sqlResultFriendsFirstName'><p>" . $firstName . "</p></div>
                                 <div class='sqlResultFriendsLastName'><p>" . $lastName . "</p></div>
@@ -191,8 +189,8 @@ include "../../../assets/htmlBlocks/buttons.php"
     </div>
 </div>
 
-<script src="../../../assets/js/jquery-3.7.1.min.js"></script>
-<script src="../../../assets/js/schedulePro/teacher/headerTeacher.js"></script>
-<script src="../../../assets/js/schedulePro/teacher/addFriends.js"></script>
+<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/schedulePro/headerButtons.js"></script>
+<script src="../../assets/js/schedulePro/addFriends.js"></script>
 </body>
 </html>

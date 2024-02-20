@@ -1,6 +1,6 @@
 <?php
 
-include "../blocks/connect.php";
+include "../schedulePro/connect.php";
 
 $email = $_POST['email'];
 

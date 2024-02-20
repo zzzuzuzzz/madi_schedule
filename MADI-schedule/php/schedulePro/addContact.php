@@ -16,27 +16,27 @@ if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
 <head>
     <meta charset="UTF-8">
     <title>Чат и контакты</title>
-    <link rel="stylesheet" href="../../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../../assets/css/headerWebVer.css">
+    <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
+    <link rel="stylesheet" href="../../assets/css/headerWebVer.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
-        include "../../../assets/htmlBlocks/whiteCSS.html";
+        include "../../assets/htmlBlocks/whiteCSS.html";
     } else if (strval($_COOKIE['background']) === "black") {
-        include "../../../assets/htmlBlocks/blackCSS.html";
+        include "../../assets/htmlBlocks/blackCSS.html";
     }
     ?>
-    <link rel="stylesheet" href="../../../assets/css/schedulePro/contactTeacher.css">
+    <link rel="stylesheet" href="../../assets/css/schedulePro/contactTeacher.css">
 </head>
 <body>
 
 <?php
-include "../../../assets/htmlBlocks/buttons.php"
+include "../../assets/htmlBlocks/buttons.php"
 ?>
 
 <div class="container">
     <div class="containerWithChatAndContactInAddFriend">
         <div class="exit">
-            <a href="contactTeacher.php">Вернутся назад</a>
+            <a href="contact.php">Вернутся назад</a>
         </div>
         <div class="containerWithContact">
             <div class="foundField">
@@ -77,11 +77,11 @@ include "../../../assets/htmlBlocks/buttons.php"
                         } else {
                             if ($sqlWork == 'teacher') {
                                 $select = $sqlClass;
-                                include "../../../vendor/blocks/switchClassTeacher.php";
+                                include "../../vendor/blocks/switchClassTeacher.php";
                                 $sqlClass = $select;
                             } else if ($sqlWork == 'student') {
                                 $select = $sqlClass;
-                                include "../../../vendor/blocks/switchClassStudent.php";
+                                include "../../vendor/blocks/switchClassStudent.php";
                                 $sqlClass = $select;
                             }
                         }
@@ -95,7 +95,7 @@ include "../../../assets/htmlBlocks/buttons.php"
                         echo "
                             <div class='sqlResult'>
                                 <div class='sqlResultAvatar'>
-                                    <img src=../../../" . $sqlAvatar . " alt='Аватар' class='avatar'>
+                                    <img src=../../" . $sqlAvatar . " alt='Аватар' class='avatar'>
                                 </div>
                                 <div class='sqlResultFirstName'><p>" . $sqlFirstName . "</p></div>
                                 <div class='sqlResultLastName'><p>" . $sqlLastName . "</p></div>
@@ -116,9 +116,9 @@ include "../../../assets/htmlBlocks/buttons.php"
     </div>
 </div>
 
-<script src="../../../assets/js/jquery-3.7.1.min.js"></script>
-<script src="../../../assets/js/schedulePro/teacher/headerTeacher.js"></script>
-<script src="../../../assets/js/schedulePro/teacher/contactTeacher.js"></script>
-<script src="../../../assets/js/schedulePro/teacher/connectToFriend.js"></script>
+<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/schedulePro/headerButtons.js"></script>
+<script src="../../assets/js/schedulePro/contact.js"></script>
+<script src="../../assets/js/schedulePro/connectToFriend.js"></script>
 </body>
 </html>
