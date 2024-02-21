@@ -23,7 +23,7 @@ $('.btnSaveAvatar').click(function (e) {
         success (data) {
 
             if (data.status) {
-                document.location.href = '../../../php/schedulePro/profile.php';
+                document.location.href = '../../php/schedulePro/profile.php';
             } else {
 
                 if (data.type === 1) {

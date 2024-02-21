@@ -7,7 +7,7 @@ $('.sqlResultButtonFromList').click(function (event) {
     let id = this.id
 
     $.ajax({
-        url: '../../vendor/schedulePro/addFriends.php',
+        url: '../../../vendor/schedulePro/contact/addFriends.php',
         type: 'POST',
         dataType: 'json',
         data: {

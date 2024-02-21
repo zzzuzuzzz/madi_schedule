@@ -48,7 +48,7 @@ include "../../assets/htmlBlocks/buttons.php"
             <div class="contactField">
                 <?php
 
-                include "../../vendor/blocks/connect.php";
+                include "../../vendor/schedulePro/connect.php";
 
                 $idUser = $_COOKIE['id'];
 
@@ -90,11 +90,11 @@ include "../../assets/htmlBlocks/buttons.php"
                             } else {
                                 if ($work == 'teacher') {
                                     $select = $class;
-                                    include "../../vendor/blocks/switchClassTeacher.php";
+                                    include "../../vendor/schedulePro/profile/switchClassTeacher.php";
                                     $class = $select;
                                 } else if ($work == 'student') {
                                     $select = $class;
-                                    include "../../vendor/blocks/switchClassStudent.php";
+                                    include "../../vendor/schedulePro/profile/switchClassStudent.php";
                                     $class = $select;
                                 }
                             }
@@ -154,11 +154,11 @@ include "../../assets/htmlBlocks/buttons.php"
                             } else {
                                 if ($work == 'teacher') {
                                     $select = $class;
-                                    include "../../vendor/blocks/switchClassTeacher.php";
+                                    include "../../vendor/schedulePro/profile/switchClassTeacher.php";
                                     $class = $select;
                                 } else if ($work == 'student') {
                                     $select = $class;
-                                    include "../../vendor/blocks/switchClassStudent.php";
+                                    include "../../vendor/schedulePro/profile/switchClassStudent.php";
                                     $class = $select;
                                 }
                             }

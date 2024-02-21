@@ -10,7 +10,7 @@ $('.foundButton').click(function (event) {
         lastName = $('input[name="lastName"]').val();
 
     $.ajax({
-        url: '../../../../vendor/schedulePro/contactFound.php',
+        url: '../../../vendor/schedulePro/contact/contactFound.php',
         type: 'POST',
         dataType: 'json',
         data: {

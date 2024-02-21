@@ -19,28 +19,28 @@ if (!empty($error_fields)) {
     echo json_encode($response);
 
     die();
+} else {
+    $path = 'uploads/' . time() . $_FILES['avatar']['name'];
+    if (!move_uploaded_file($_FILES['avatar']['tmp_name'], '../../../' . $path)) {
+        $response = [
+            "status" => false,
+            "type" => 2,
+            "message" => "Ошибка при загрузке аватарки",
+        ];
+        echo json_encode($response);
+    } else {
+        $email = strval($_COOKIE['email']);
+        $lastPhoto = strval($_COOKIE['avatar']);
+        unlink("../../" . $lastPhoto);
+
+        mysqli_query($connect, "UPDATE `madiAuth` SET `avatar`= '$path' WHERE `email` = '$email'");
+
+        setcookie('avatar', $path, time() + 60 * 60 * 24 * 30 * 12, '/');
+
+        $response = [
+            "status" => true,
+            "message" => "Регистрация прошла успешно!",
+        ];
+        echo json_encode($response);
+    }
 }
-
-$path = 'uploads/' . time() . $_FILES['avatar']['name'];
-if (!move_uploaded_file($_FILES['avatar']['tmp_name'], '../../' . $path)) {
-    $response = [
-        "status" => false,
-        "type" => 2,
-        "message" => "Ошибка при загрузке аватарки",
-    ];
-    echo json_encode($response);
-}
-
-$email = strval($_COOKIE['email']);
-$lastPhoto = strval($_COOKIE['avatar']);
-unlink("../../" . $lastPhoto);
-
-mysqli_query($connect, "UPDATE `madiAuth` SET `avatar`= '$path' WHERE `email` = '$email'");
-
-setcookie('avatar', $path, time() + 60 * 60 * 24 * 30 * 12, '/');
-
-$response = [
-    "status" => true,
-    "message" => "Регистрация прошла успешно!",
-];
-echo json_encode($response);

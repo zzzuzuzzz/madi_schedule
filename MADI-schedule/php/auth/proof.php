@@ -1,6 +1,6 @@
 <?php
 
-if (!$_COOKIE['codeFromEmail']) {
+if (!$_COOKIE['codeProof']) {
     header('Location: auth.php');
 }
 ?>

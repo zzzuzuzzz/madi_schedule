@@ -56,7 +56,6 @@
 
             } else if ($user['work'] == 'student') {
 
-
                 $select = $user['class'];
                 include "../schedulePro/profile/switchClassStudent.php";
 

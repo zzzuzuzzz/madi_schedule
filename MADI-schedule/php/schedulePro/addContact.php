@@ -1,12 +1,10 @@
 <?php
 
-if ($_COOKIE['user'] && !$_COOKIE["profileTeacher"]) {
-    header('Location: ../../scheduleLite/schedule.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && !$_COOKIE['profileStudent']) {
-    header('Location: ../../../index.php');
-} else if (!$_COOKIE['user'] && !$_COOKIE["profileTeacher"] && $_COOKIE['profileStudent']) {
-    header('Location: ../student/scheduleStudent.php');
-} else if ($_COOKIE['user'] && $_COOKIE["profileTeacher"]) {
+if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
+    header('Location: ../scheduleLite/schedule.php');
+} else if (!$_COOKIE['user'] && !$_COOKIE["profile"]) {
+    header('Location: ../../index.php');
+} else if ($_COOKIE['user'] && $_COOKIE["profile"]) {
     setcookie('user', '', -1, '/');
 }
 ?>
@@ -77,11 +75,11 @@ include "../../assets/htmlBlocks/buttons.php"
                         } else {
                             if ($sqlWork == 'teacher') {
                                 $select = $sqlClass;
-                                include "../../vendor/blocks/switchClassTeacher.php";
+                                include "../../vendor/schedulePro/profile/switchClassTeacher.php";
                                 $sqlClass = $select;
                             } else if ($sqlWork == 'student') {
                                 $select = $sqlClass;
-                                include "../../vendor/blocks/switchClassStudent.php";
+                                include "../../vendor/schedulePro/profile/switchClassStudent.php";
                                 $sqlClass = $select;
                             }
                         }

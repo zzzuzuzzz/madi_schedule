@@ -5,55 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="113cfb31-c985-45f3-bfe1-5a9dd173b53e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/chat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/auth/singin.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/auth/singin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/student/avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/avatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/student/headerStudent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/student/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/student/saveStudent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/addFriends.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/addFriends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/avatar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/chatTeacher.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/connectToFriend.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/connectToFriend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/contactTeacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/headerTeacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/headerButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/teacher/saveTeacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro/profileSave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/emailProof.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/emailProof.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/forgotPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/forgotPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/student/chatStudent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/student/profileStudent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/student/scheduleStudent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/student/taskStudent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/teacher/addContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/teacher/chatTeacher.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/teacher/contactTeacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/teacher/profileTeacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/teacher/scheduleTeacher.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/teacher/taskTeacher.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/auth/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/auth/changePassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/auth/emailProof.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/auth/emailProof.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/auth/forgotPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/auth/forgotPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/auth/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/auth/signin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/auth/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/auth/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/blocks/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/blocks/popup.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/popup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/blocks/switchClassStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/switchClassStudent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/blocks/switchClassTeacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/switchClassTeacher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/forStudentAndTeacher/profileSettingBackground.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileSettingBackground.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/forStudentAndTeacher/profileSettingLanguage.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileSettingLanguage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/changePassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/proof.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/proof.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/17080712481577000602b1e49d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/170807127115698233144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/1708071306Мезенцев_пр1л3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/17080910271577000602b1e49d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/170809108615698233144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/1708145216logo.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/student/profileVendorStudentClassVar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/teacher/addFriends.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact/addFriends.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/teacher/connectToFriend.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact/connectToFriend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/teacher/contactFoundTeacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact/contactFound.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/teacher/profileVendorTeacherClassVar.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileVendorClassVar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +87,7 @@
       <workItem from="1707937385633" duration="29521000" />
       <workItem from="1708111968865" duration="5202000" />
       <workItem from="1708340997517" duration="6296000" />
-      <workItem from="1708412477272" duration="3823000" />
+      <workItem from="1708412477272" duration="4784000" />
     </task>
     <servers />
   </component>
