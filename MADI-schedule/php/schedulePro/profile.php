@@ -737,7 +737,34 @@ include "../../assets/htmlBlocks/buttons.php"
                         ?>
                     </button>
                 </form>
-
+                <form class="changePassword">
+                    <a href="changePassword.php" class="btnChangePassword">
+                        <?php
+                        $language = strval($_COOKIE['language']);
+                        if ($language === 'ru') {
+                            echo "Сменить пароль";
+                        } else if ($language === 'en') {
+                            echo "Change password";
+                        } else if ($language === 'uz') {
+                            echo "темная тема";
+                        }
+                        ?>
+                    </a>
+                </form>
+                <form class="deleteProfile">
+                    <button class="btnDeleteProfile">
+                        <?php
+                        $language = strval($_COOKIE['language']);
+                        if ($language === 'ru') {
+                            echo "Удалить профиль";
+                        } else if ($language === 'en') {
+                            echo "Delete profile";
+                        } else if ($language === 'uz') {
+                            echo "темная тема";
+                        }
+                        ?>
+                    </button>
+                </form>
             </div>
         </div>
 
@@ -750,5 +777,6 @@ include "../../assets/htmlBlocks/buttons.php"
     <script src="../../assets/js/schedulePro/profileSave.js"></script>
     <script src="../../assets/js/schedulePro/popup.js"></script>
     <script src="../../assets/js/schedulePro/avatar.js"></script>
+    <script src="../../assets/js/schedulePro/deleteProfile.js"></script>
 </body>
 </html>

@@ -28,8 +28,8 @@ if (mysqli_num_rows($checkFromList) == NULL || mysqli_num_rows($checkToList) == 
 
 } else {
 
-    mysqli_query($connect, "UPDATE `$idFriend` SET `friendList` = '$idUser', `toList` = NULL, `fromList` = NULL");
-    mysqli_query($connect, "UPDATE `$idUser` SET `friendList` = '$idFriend', `toList` = NULL, `fromList` = NULL");
+    mysqli_query($connect, "UPDATE `$idFriend` SET `friendList` = '$idUser', `toList` = NULL, `fromList` = NULL WHERE `toList` = '$idUser'");
+    mysqli_query($connect, "UPDATE `$idUser` SET `friendList` = '$idFriend', `toList` = NULL, `fromList` = NULL WHERE `fromList` = '$idFriend'");
 
     $response = [
         "status" => true
