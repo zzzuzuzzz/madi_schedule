@@ -10,5 +10,8 @@
     setcookie('id', '', -1, '/');
     setcookie('profile', '', -1, '/');
     setcookie('avatar', '', -1, '/');
+    setcookie('friendListLocal', '', -1, '/');
+    setcookie('task', '', -1, '/');
+    setcookie('schedule', '', -1, '/');
 
 header('Location: ../../index.php');

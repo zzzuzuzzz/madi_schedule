@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="113cfb31-c985-45f3-bfe1-5a9dd173b53e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact/addFriends.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact/addFriends.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/contactTeacher.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/contactTeacher.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/bye.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/bye.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/task.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/auth/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/auth/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/deleteProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/deleteProfile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -43,22 +49,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "/Users/rznbrg/Documents/git/madi_schedule/MADI-schedule",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rznbrg/Documents/git/madi_schedule/MADI-schedule&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/MADI-schedule" />
@@ -73,7 +79,9 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
   </component>
@@ -91,7 +99,8 @@
       <workItem from="1708340997517" duration="6296000" />
       <workItem from="1708412477272" duration="4784000" />
       <workItem from="1708497623834" duration="13164000" />
-      <workItem from="1708599903245" duration="2832000" />
+      <workItem from="1708599903245" duration="31586000" />
+      <workItem from="1708850378130" duration="5593000" />
     </task>
     <servers />
   </component>

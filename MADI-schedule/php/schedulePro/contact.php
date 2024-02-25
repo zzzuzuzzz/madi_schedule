@@ -41,7 +41,10 @@ include "../../assets/htmlBlocks/buttons.php"
                 <p class="pInContainer pContact">Контакты</p>
             </div>
             <div class="addContact">
-                <a href="addContact.php">Добавить новый контакт</a>
+                <a href="addContact.php">Найти пользователя</a>
+            </div>
+            <div class="addContactLocal">
+                <a href="addContactLocal.php">Добавить новый контакт</a>
             </div>
         </div>
         <div class="containerWithContact">
@@ -51,9 +54,11 @@ include "../../assets/htmlBlocks/buttons.php"
                 include "../../vendor/schedulePro/connect.php";
 
                 $idUser = $_COOKIE['id'];
+                $friendListLocal = $_COOKIE['friendListLocal'];
 
                 $fromListFromSql = mysqli_query($connect, "SELECT `fromList` FROM `$idUser`");
                 $friendListFromSql = mysqli_query($connect, "SELECT `friendList` FROM `$idUser`");
+                $friendListLocalFromSql = mysqli_query($connect, "SELECT * FROM `$friendListLocal`");
 
                 if (mysqli_num_rows($fromListFromSql) > 0) {
 
@@ -181,6 +186,44 @@ include "../../assets/htmlBlocks/buttons.php"
                             </div>
                         ";
                         }
+                    }
+                }
+                if (mysqli_num_rows($friendListLocalFromSql) > 0) {
+
+                    $numPost = intval(mysqli_num_rows($friendListLocalFromSql));
+
+                    for ($numPost; $numPost > 0; $numPost--)
+                    {
+                        $user = mysqli_fetch_assoc($friendListLocalFromSql);
+
+                        $firstName = strval($user['firstName']);
+                        $lastName = strval($user['lastName']);
+                        $email = strval($user['email']);
+                        $work = strval($user['work']);
+                        $avatar = strval($user['avatar']);
+
+
+                        if ($avatar == NULL) {
+                            $avatar = 'assets/img/svg/iconProfile.svg';
+                        }
+                        if ($_COOKIE['language'] == 'ru') {
+                            if ($work == 'teacher') {
+                                $work = 'Преподователь';
+                            } else if ($work == 'student') {
+                                $work = 'Студент';
+                            }
+                        }
+                        echo "
+                           <div class='sqlResultFriends'>
+                               <div class='sqlResultFriendsAvatar'>
+                                   <img src=../../" . $avatar . " alt='Аватар' class='avatar'>
+                               </div>
+                               <div class='sqlResultFriendsFirstName'><p>" . $firstName . "</p></div>
+                               <div class='sqlResultFriendsLastName'><p>" . $lastName . "</p></div>
+                               <div class='sqlResultFriendsWork'><p>" . $email . "</p></div>
+                               <div class='sqlResultFriendsClass'><p>" . $work . "</p></div>
+                           </div>
+                       ";
                     }
                 }
                 ?>

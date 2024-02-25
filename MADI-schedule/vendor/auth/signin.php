@@ -77,7 +77,20 @@
             setcookie('avatar', $user['avatar'], time() + 60 * 60 * 24 * 30 * 12, '/');
 
             $id = strval($user['id']);
+            $friendLocal = 'friendList_' . $id;
+            $tasks = 'tasks_' . $id;
+            $schedules = 'schedule_' . $id;
+
             mysqli_query($connect, "CREATE TABLE IF NOT EXISTS `$id` (`id` INT NOT NULL AUTO_INCREMENT, `friendList` INT, `toList` INT, `fromList` INT, PRIMARY KEY(`id`))");
+            mysqli_query($connect, "CREATE TABLE IF NOT EXISTS `$friendLocal` (`id` INT NOT NULL AUTO_INCREMENT, `firstName` VARCHAR(50), `lastName` VARCHAR(50), `email` VARCHAR(70), `work` VARCHAR(32), `avatar` VARCHAR(500), PRIMARY KEY(`id`))");
+            mysqli_query($connect, "CREATE TABLE IF NOT EXISTS `$tasks` (`id` INT NOT NULL AUTO_INCREMENT, `title` VARCHAR(30), `text` VARCHAR(50), `date` DATE, PRIMARY KEY (`id`))");
+            mysqli_query($connect, "CREATE TABLE IF NOT EXISTS `$schedules` (`id` INT NOT NULL AUTO_INCREMENT , `lessonName` VARCHAR(30) , `lessonType` VARCHAR(30) , `building` VARCHAR(30) , `audience` VARCHAR(30) , `teacherName` VARCHAR(30) , `date` DATE , `time` TIME , PRIMARY KEY (`id`))");
+            if (!is_dir('../../uploads/' . $friendLocal)) {
+                mkdir('../../uploads/' . $friendLocal);
+            }
+            setcookie('friendListLocal', $friendLocal, time() + 60 * 60 * 24 * 30 * 12, '/');
+            setcookie('task', $tasks, time() + 60 * 60 * 24 * 30 * 12, '/');
+            setcookie('schedule', $schedules, time() + 60 * 60 * 24 * 30 * 12, '/');
 
             echo json_encode($response);
         }

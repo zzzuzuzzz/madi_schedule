@@ -3,6 +3,10 @@
 include "../connect.php";
 
 $id = strval($_COOKIE['id']);
+$friendListLocal = strval($_COOKIE['friendListLocal']);
+$task = strval($_COOKIE['task']);
+$schedule = strval($_COOKIE['schedule']);
+
 
 $checkUser = mysqli_query($connect, "SELECT * FROM `$id`");
 $numPost = intval(mysqli_num_rows($checkUser));
@@ -37,6 +41,9 @@ if ($avatar) {
 
 mysqli_query($connect, "DELETE FROM `madiAuth` WHERE `id` = '$id'");
 mysqli_query($connect, "DROP TABLE `$id`");
+mysqli_query($connect, "DROP TABLE `$friendListLocal`");
+mysqli_query($connect, "DROP TABLE `$task`");
+mysqli_query($connect, "DROP TABLE `$schedule`");
 
 $response = [
     "status" => true,
