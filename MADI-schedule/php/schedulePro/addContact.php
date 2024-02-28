@@ -40,10 +40,7 @@ include "../../assets/htmlBlocks/buttons.php"
             <div class="foundField">
                 <form class="found">
                     <label>
-                        <input type="text" class="inputFirstName" name="firstName" placeholder="Имя">
-                    </label>
-                    <label>
-                        <input type="text" class="inputLastName" name="lastName" placeholder="Фамилия">
+                        <input type="text" class="inputFullName" name="fullName" placeholder="Иванов Иван">
                     </label>
                     <button class="foundButton">&#10145</button>
                 </form>

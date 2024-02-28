@@ -6,16 +6,14 @@ $('.foundButton').click(function (event) {
 
     $(`input`).removeClass('error')
 
-    let firstName = $('input[name="firstName"]').val(),
-        lastName = $('input[name="lastName"]').val();
+    let fullName = $('input[name="fullName"]').val()
 
     $.ajax({
         url: '../../../vendor/schedulePro/contact/contactFound.php',
         type: 'POST',
         dataType: 'json',
         data: {
-            firstName: firstName,
-            lastName: lastName
+            fullName: fullName
         },
         success (data) {
 
