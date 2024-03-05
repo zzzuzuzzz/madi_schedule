@@ -4,6 +4,7 @@ include "../connect.php";
 
 $fullName = $_POST['fullName'];
 $true = 'true';
+$idArray = [];
 
 $errorFields = [];
 
@@ -49,10 +50,37 @@ if (mysqli_num_rows($checkUser) > 0 || mysqli_num_rows($checkUserTwo) > 0) {
     $val = 1;
     $numPost = intval(mysqli_num_rows($checkUser));
 
-    for ($numPost; $numPost > 0; $numPost-- && $val++) {
+    for ($numPost; $numPost >= 1; $numPost-- && $val++) {
         $user = mysqli_fetch_assoc($checkUser);
 
         if ($user['id'] === strval($_COOKIE['id'])) {
+            continue;
+        } else {
+            $array = array(
+                'cook_one' => strval($user['firstName']),
+                'cook_two' => strval($user['lastName']),
+                'cook_three' => strval($user['avatar']),
+                'cook_four' => strval($user['id']),
+                'cook_five' => strval($user['work']),
+                'cook_six' => strval($user['class']),
+            );
+
+            $idArray[] = strval($user['id']);
+
+            $str = strval($val);
+
+            setcookie('sql' . $str, serialize($array), time() + 60 * 60 * 24 * 30 * 12, '/');
+        }
+    }
+
+    $numPost = intval(mysqli_num_rows($checkUserTwo));
+
+    for ($numPost; $numPost >= 1; $numPost-- && $val++) {
+        $user = mysqli_fetch_assoc($checkUserTwo);
+
+        if ($user['id'] === strval($_COOKIE['id'])) {
+            continue;
+        } else if (in_array($user['id'], $idArray)) {
             continue;
         } else {
             $array = array(
@@ -69,29 +97,6 @@ if (mysqli_num_rows($checkUser) > 0 || mysqli_num_rows($checkUserTwo) > 0) {
             setcookie('sql' . $str, serialize($array), time() + 60 * 60 * 24 * 30 * 12, '/');
         }
     }
-
-    $numPost = intval(mysqli_num_rows($checkUserTwo));
-
-    for ($numPost; $numPost > 0; $numPost-- && $val++) {
-        $user = mysqli_fetch_assoc($checkUserTwo);
-
-        if ($user['id'] === strval($_COOKIE['id'])) {
-            continue;
-        } else {
-            $array = array(
-                'cook_one' => strval($user['firstName']),
-                'cook_two' => strval($user['lastName']),
-                'cook_three' => strval($user['avatar']),
-                'cook_four' => strval($user['id']),
-                'cook_five' => strval($user['work']),
-                'cook_six' => strval($user['class']),
-            );
-
-            $str = strval($val);
-
-            setcookie('sql' . $str, serialize($array), time() + 60 * 60 * 24 * 30 * 12, '/');
-        }
-    };
 
     $response = [
         "status" => true

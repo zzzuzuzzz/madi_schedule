@@ -28,8 +28,8 @@ if (mysqli_num_rows($checkFromList) > 0 || mysqli_num_rows($checkToList) > 0) {
 
 } else {
 
-    mysqli_query($connect, "INSERT INTO `$idFriend` (`friendList`, `toList`, `fromList`) VALUES (NULL, NULL, '$idUser')");
-    mysqli_query($connect, "INSERT INTO `$idUser` (`friendList`, `toList`, `fromList`) VALUES (NULL, '$idFriend', NULL)");
+    mysqli_query($connect, "INSERT INTO `$idFriend` (`friendList`, `toList`, `fromList`, `chat`) VALUES (NULL, NULL, '$idUser', 'false')");
+    mysqli_query($connect, "INSERT INTO `$idUser` (`friendList`, `toList`, `fromList`, `chat`) VALUES (NULL, '$idFriend', NULL, 'false')");
 
     $response = [
         "status" => true
