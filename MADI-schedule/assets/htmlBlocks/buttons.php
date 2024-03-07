@@ -1,6 +1,6 @@
 <div class="header">
     <button class="schedule btnHeader">
-        <img src="../../../assets/img/svg/iconSchedule.svg" alt="Иконка расписания">
+        <img src="../../../assets/img/svg/iconScheduleBlack.svg" alt="Иконка расписания">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -15,7 +15,7 @@
         </p>
     </button>
     <button class="task btnHeader">
-        <img src="../../../assets/img/svg/iconTask.svg" alt="Иконка заданий">
+        <img src="../../../assets/img/svg/iconTaskBlack.svg" alt="Иконка заданий">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -30,7 +30,7 @@
         </p>
     </button>
     <button class="logo btnHeader">
-        <img src="../../../assets/img/svg/iconMadi.svg" alt="Логотип МАДИ" class="madiLogo">
+        <img src="../../../assets/img/svg/iconMadiBlack.svg" alt="Логотип МАДИ" class="madiLogo">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -45,7 +45,7 @@
         </p>
     </button>
     <button class="chat btnHeader">
-        <img src="../../../assets/img/svg/iconChat.svg" alt="Иконка чата">
+        <img src="../../../assets/img/svg/iconChatBlack.svg" alt="Иконка чата">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -60,7 +60,7 @@
         </p>
     </button>
     <button class="profile btnHeader">
-        <img src="../../../assets/img/svg/iconProfile.svg" alt="Иконка профиля">
+        <img src="../../../assets/img/svg/iconProfileBlack.svg" alt="Иконка профиля">
         <p>
             <?php
             $language = $_COOKIE['language'];

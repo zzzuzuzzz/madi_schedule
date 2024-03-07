@@ -15,7 +15,7 @@ if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
     <meta charset="UTF-8">
     <title>Чат и контакты</title>
     <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../assets/css/headerWebVer.css">
+    <link rel="stylesheet" href="../../assets/css/headerForChatAndProfile.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
         include "../../assets/htmlBlocks/whiteCSS.html";

@@ -38,13 +38,3 @@ img {
     background-color: transparent;
     border: transparent;
 }
-.container {
-    width: 100%;
-    border-bottom: 1px black solid;
-}
-.calendarBlock {
-    text-align: center;
-}
-#calendar {
-    /*display: inline-block;*/
-}

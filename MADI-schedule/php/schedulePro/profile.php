@@ -26,7 +26,7 @@ if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
         ?>
     </title>
     <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../assets/css/headerWebVer.css">
+    <link rel="stylesheet" href="../../assets/css/headerForChatAndProfile.css">
     <link rel="stylesheet" href="../../assets/css/schedulePro/profile.css">
     <link rel="stylesheet" href="../../assets/css/schedulePro/popup.css">
     <?php
@@ -49,7 +49,7 @@ include "../../assets/htmlBlocks/buttons.php"
 
             <img src="<?php
             if (strval($_COOKIE['avatar']) == NULL) {
-                echo "../../assets/img/svg/iconProfile.svg";
+                echo "../../assets/img/svg/iconProfileBlack.svg";
             } else {
                 echo "../../" . strval($_COOKIE['avatar']);
             }
