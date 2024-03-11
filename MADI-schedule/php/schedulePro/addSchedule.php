@@ -14,16 +14,13 @@ if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
 <head>
     <meta charset="UTF-8">
     <title>Чат и контакты</title>
-    <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../assets/css/headerForChatAndProfile.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
-        include "../../assets/htmlBlocks/whiteCSS.html";
+        echo '<link rel="stylesheet" href="../../assets/css/schedulePro/schedule/addScheduleWhite.css">';
     } else if (strval($_COOKIE['background']) === "black") {
-        include "../../assets/htmlBlocks/blackCSS.html";
+        echo '<link rel="stylesheet" href="../../assets/css/schedulePro/schedule/addScheduleBlack.css">';
     }
     ?>
-    <link rel="stylesheet" href="../../assets/css/schedulePro/contactTeacher.css">
 </head>
 <body>
 
@@ -32,9 +29,9 @@ include "../../assets/htmlBlocks/buttons.php"
 ?>
 
 <div class="container">
-    <div class="addContactLocalField">
+    <div class="addScheduleLocal">
+        <a href="schedule.php" class="exitToSchedule">Вернуться назад</a>
         <form class="form">
-            <a href="schedule.php" class="exitToTask">Вернуться назад</a>
             <div class="lessonName">
                 <label for="lessonName">Введите название предмета</label>
                 <input type="text" id="lessonName" placeholder="Русский язык" name="lessonName">

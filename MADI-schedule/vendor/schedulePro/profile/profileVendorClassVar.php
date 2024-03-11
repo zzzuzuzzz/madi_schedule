@@ -26,10 +26,10 @@ if (!empty($errorFields)) {
 
     mysqli_query($connect, "UPDATE `madiAuth` SET `class`= '$select' WHERE `email` = '$email'");
 
-    if (str_getcsv($_COOKIE['work']) == 'teacher') {
+    if (strval($_COOKIE['work']) == 'teacher') {
         include "switchClassTeacher.php";
         setcookie('class', $select, time()+86400*30*12, '/');
-    } else {
+    } else if ((strval($_COOKIE['work']) == 'student')){
         include "switchClassStudent.php";
         setcookie('class', $select, time()+86400*30*12, '/');
     }

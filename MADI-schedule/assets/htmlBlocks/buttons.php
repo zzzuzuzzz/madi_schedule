@@ -1,6 +1,14 @@
 <div class="header">
     <button class="schedule btnHeader">
-        <img src="../../../assets/img/svg/iconScheduleBlack.svg" alt="Иконка расписания">
+        <img
+            <?php
+            if (strval($_COOKIE['background']) === "white") {
+                echo 'src="../../assets/img/svg/iconScheduleBlack.svg" ';
+            } else if (strval($_COOKIE['background']) === "black") {
+                echo 'src="../../assets/img/svg/iconScheduleWhite.svg" ';
+            }
+            ?>
+                alt="Иконка расписания">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -15,7 +23,15 @@
         </p>
     </button>
     <button class="task btnHeader">
-        <img src="../../../assets/img/svg/iconTaskBlack.svg" alt="Иконка заданий">
+        <img
+            <?php
+            if (strval($_COOKIE['background']) === "white") {
+                echo 'src="../../assets/img/svg/iconTaskBlack.svg" ';
+            } else if (strval($_COOKIE['background']) === "black") {
+                echo 'src="../../assets/img/svg/iconTaskWhite.svg" ';
+            }
+            ?>
+                alt="Иконка заданий">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -29,8 +45,16 @@
             ?>
         </p>
     </button>
-    <button class="logo btnHeader">
-        <img src="../../../assets/img/svg/iconMadiBlack.svg" alt="Логотип МАДИ" class="madiLogo">
+    <button class="logo">
+        <img class="madiLogo"
+            <?php
+            if (strval($_COOKIE['background']) === "white") {
+                echo 'src="../../assets/img/svg/iconMadiBlack.svg" ';
+            } else if (strval($_COOKIE['background']) === "black") {
+                echo 'src="../../assets/img/svg/iconMadiWhite.svg" ';
+            }
+            ?>
+             alt="Логотип МАДИ">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -45,7 +69,15 @@
         </p>
     </button>
     <button class="chat btnHeader">
-        <img src="../../../assets/img/svg/iconChatBlack.svg" alt="Иконка чата">
+        <img
+            <?php
+            if (strval($_COOKIE['background']) === "white") {
+                echo 'src="../../assets/img/svg/iconChatBlack.svg" ';
+            } else if (strval($_COOKIE['background']) === "black") {
+                echo 'src="../../assets/img/svg/iconChatWhite.svg" ';
+            }
+            ?>
+                alt="Иконка чата">
         <p>
             <?php
             $language = $_COOKIE['language'];
@@ -60,7 +92,15 @@
         </p>
     </button>
     <button class="profile btnHeader">
-        <img src="../../../assets/img/svg/iconProfileBlack.svg" alt="Иконка профиля">
+        <img
+            <?php
+            if (strval($_COOKIE['background']) === "white") {
+                echo 'src="../../assets/img/svg/iconProfileBlack.svg" ';
+            } else if (strval($_COOKIE['background']) === "black") {
+                echo 'src="../../assets/img/svg/iconProfileWhite.svg" ';
+            }
+            ?>
+                alt="Иконка профиля">
         <p>
             <?php
             $language = $_COOKIE['language'];

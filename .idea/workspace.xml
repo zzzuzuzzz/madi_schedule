@@ -6,19 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="113cfb31-c985-45f3-bfe1-5a9dd173b53e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/headerWebVer.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/headerForChatAndProfile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/scheduleResult.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addContactLocal.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addContactLocal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addDialog.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addDialog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/schedule/scheduleBlack.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/schedule/scheduleBlack.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/blackCSS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/buttons.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/buttons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/whiteCSS.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addSchedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addSchedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addTask.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/chat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/task.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/vendor.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/1708498886logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/popup.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/popup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileVendorClassVar.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileVendorClassVar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,27 +62,29 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/rznbrg/Documents/git/madi_schedule/MADI-schedule/assets/css&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rznbrg/Documents/git/madi_schedule/MADI-schedule/assets/css/schedulePro/task&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/task" />
       <recent name="$PROJECT_DIR$/MADI-schedule/assets/css" />
       <recent name="$PROJECT_DIR$/MADI-schedule" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MADI-schedule/assets/img/svg" />
+      <recent name="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/schedule" />
       <recent name="$PROJECT_DIR$/MADI-schedule/php" />
       <recent name="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact" />
       <recent name="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile" />
-      <recent name="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro" />
-      <recent name="$PROJECT_DIR$/MADI-schedule/assets/js/schedulePro" />
     </key>
   </component>
   <component name="RunManager">
@@ -124,6 +125,10 @@
       <workItem from="1709623615034" duration="6453000" />
       <workItem from="1709652224764" duration="2608000" />
       <workItem from="1709713265087" duration="516000" />
+      <workItem from="1709737783280" duration="15919000" />
+      <workItem from="1709887928252" duration="4381000" />
+      <workItem from="1709959989630" duration="3868000" />
+      <workItem from="1710185767890" duration="2046000" />
     </task>
     <servers />
   </component>

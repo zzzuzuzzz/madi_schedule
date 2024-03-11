@@ -31,7 +31,7 @@ if (!empty($error_fields)) {
     } else {
         $email = strval($_COOKIE['email']);
         $lastPhoto = strval($_COOKIE['avatar']);
-        unlink("../../" . $lastPhoto);
+        unlink("../../../" . $lastPhoto);
 
         mysqli_query($connect, "UPDATE `madiAuth` SET `avatar`= '$path' WHERE `email` = '$email'");
 

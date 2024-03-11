@@ -25,15 +25,12 @@ if ($_COOKIE['user'] && !$_COOKIE["profile"]) {
         }
         ?>
     </title>
-    <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../assets/css/headerForChatAndProfile.css">
-    <link rel="stylesheet" href="../../assets/css/schedulePro/profile.css">
     <link rel="stylesheet" href="../../assets/css/schedulePro/popup.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
-        include "../../assets/htmlBlocks/whiteCSS.html";
+        echo '<link rel="stylesheet" href="../../assets/css/schedulePro/profile/profileWhite.css">';
     } else if (strval($_COOKIE['background']) === "black") {
-        include "../../assets/htmlBlocks/blackCSS.html";
+        echo '<link rel="stylesheet" href="../../assets/css/schedulePro/profile/profileBlack.css">';
     }
     ?>
 </head>
@@ -609,7 +606,7 @@ include "../../assets/htmlBlocks/buttons.php"
                         ?>
                     </label>
                     <label>
-                        <select name="selectLanguage" id="language">
+                        <select name="selectLanguage" id="language" class="selectLanguage">
                             <option name="unvalue" value="unvalue" selected disabled>
                                 <?php
                                 $language = strval($_COOKIE['language']);
@@ -685,7 +682,7 @@ include "../../assets/htmlBlocks/buttons.php"
                         ?>
                     </label>
                     <label>
-                        <select name="selectBackground" id="background">
+                        <select name="selectBackground" id="background" class="selectBackground">
                             <option name="unvalue" value="unvalue" selected disabled>
                                 <?php
                                 $language = strval($_COOKIE['language']);
@@ -737,35 +734,35 @@ include "../../assets/htmlBlocks/buttons.php"
                         ?>
                     </button>
                 </form>
-                <form class="changePassword">
-                    <a href="changePassword.php" class="btnChangePassword">
-                        <?php
-                        $language = strval($_COOKIE['language']);
-                        if ($language === 'ru') {
-                            echo "Сменить пароль";
-                        } else if ($language === 'en') {
-                            echo "Change password";
-                        } else if ($language === 'uz') {
-                            echo "темная тема";
-                        }
-                        ?>
-                    </a>
-                </form>
-                <form class="deleteProfile">
-                    <button class="btnDeleteProfile">
-                        <?php
-                        $language = strval($_COOKIE['language']);
-                        if ($language === 'ru') {
-                            echo "Удалить профиль";
-                        } else if ($language === 'en') {
-                            echo "Delete profile";
-                        } else if ($language === 'uz') {
-                            echo "темная тема";
-                        }
-                        ?>
-                    </button>
-                </form>
             </div>
+            <form class="changePassword">
+                <a href="changePassword.php" class="btnChangePassword">
+                    <?php
+                    $language = strval($_COOKIE['language']);
+                    if ($language === 'ru') {
+                        echo "Сменить пароль";
+                    } else if ($language === 'en') {
+                        echo "Change password";
+                    } else if ($language === 'uz') {
+                        echo "темная тема";
+                    }
+                    ?>
+                </a>
+            </form>
+            <form class="deleteProfile">
+                <button class="btnDeleteProfile">
+                    <?php
+                    $language = strval($_COOKIE['language']);
+                    if ($language === 'ru') {
+                        echo "Удалить профиль";
+                    } else if ($language === 'en') {
+                        echo "Delete profile";
+                    } else if ($language === 'uz') {
+                        echo "темная тема";
+                    }
+                    ?>
+                </button>
+            </form>
         </div>
 
         <p class="msg none">Lorem ipsum dolor sit amet.</p>

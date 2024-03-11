@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3f41;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+}
+
+
+
+.header {
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    padding: 5px;
+    background: #3c3f41;
+    border-bottom: 1px solid white;
+}
+.schedule {
+    grid-column: 2;
+}
+.task {
+    grid-column: 4;
+}
+.logo {
+    background: transparent;
+    border: transparent;
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+.chat {
+    grid-column: 12;
+}
+.profile {
+    grid-column: 14;
+}
+.madiLogo {
+    width: 100px;
+}
+.btnHeader {
+    padding: 10px;
+    background: #2c2c2c;
+    border: white solid 1px;
+    border-radius: 15px;
+}
+img {
+    width: 50px;
+    height: 50px;
+}
+.trans {
+    background: transparent;
+}
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3f41;
+    display: grid;
+    grid-template-columns: 1fr 602px 1fr;
+    grid-template-rows: 1fr 470px 1fr;
+}
+.containerWithChatAndContact {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    background-color: #3c3f41;
+    border-bottom: white 1px solid;
+    border-radius: 15px 15px 0 0 ;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+
+
+
+.selector {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: transparent;
+    border: white 1px solid;
+    border-radius: 15px 15px 0 0 ;
+}
+.chatSelect {
+    background: transparent;
+    padding: 12px 100px;
+    grid-column: 1;
+    border-radius: 15px 0 0 0;
+    border-right: white solid 1px;
+}
+.contactSelect {
+    background: transparent;
+    padding: 12px 100px;
+    grid-column: 2;
+    border-radius: 0 15px 0 0;
+}
+.pChat {
+    background-color: #1071B5;
+    color: white;
+    border-radius: 10px;
+}
+.pContact {
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 10px;
+}
+.pInContainer {
+    text-align: center;
+    width: 100px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+.containerWithFriendsAndChat {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+.friendsField {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    border-right: white 1px solid;
+    border-left: white 1px solid;
+}
+.sqlResultFriends {
+    width: 100%;
+    height: 60px;
+    display: grid;
+    margin-top: 2px;
+    border: white 1px solid;
+    border-radius: 15px;
+    background-color: #2c2c2c;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+.sqlResultFriendsAvatar {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+}
+.avatar {
+    height: 58px;
+    width: 58px;
+}
+.sqlResultFriendsFirstName {
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+.sqlResultFriendsLastName {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+}
+.dialog {
+    border: #1071B5 1px solid;
+}
+.myMsg {
+    width: 100%;
+    text-align: right;
+}
+.friendMsg {
+    width: 100%;
+    text-align: left
+}
+
+
+
+
+
+.chatField {
+    width: 100%;
+    height: 100%;
+}
+.dialogField {
+    width: 100%;
+    height: 100%;
+    border-right: white 1px solid;
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+.sendMsgField {
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+}
+.sendMsg {
+    width: 90%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    border: 1px white solid;
+}
+.btnSendMsg {
+    width: 9%;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    border: white 1px solid;
+}

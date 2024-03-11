@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3f41;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+}
+
+
+
+.header {
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    padding: 5px;
+    background: #3c3f41;
+    border-bottom: 1px solid white;
+}
+.schedule {
+    grid-column: 2;
+}
+.task {
+    grid-column: 4;
+}
+.logo {
+    background: transparent;
+    border: transparent;
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+.chat {
+    grid-column: 12;
+}
+.profile {
+    grid-column: 14;
+}
+.madiLogo {
+    width: 100px;
+}
+.btnHeader {
+    padding: 10px;
+    background: #2c2c2c;
+    border: white solid 1px;
+    border-radius: 15px;
+}
+img {
+    width: 50px;
+    height: 50px;
+}
+.trans {
+    background: transparent;
+}
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3f41;
+    display: grid;
+    grid-template-columns: 1fr 602px 1fr;
+    grid-template-rows: 1fr 470px 1fr;
+}
+.containerWithChatAndContact {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    background-color: #3c3f41;
+    border-bottom: white 1px solid;
+    border-radius: 15px 15px 0 0 ;
+    display: grid;
+    grid-template-rows: 20% 80%;
+}
+
+
+
+
+.selector {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: transparent;
+    border: white 1px solid;
+    border-radius: 15px 15px 0 0 ;
+}
+.chatSelect {
+    background: transparent;
+    padding: 15px 100px;
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 15px 0 0 0;
+    border-right: white solid 1px;
+    border-bottom: white 1px solid;
+}
+.contactSelect {
+    background: transparent;
+    padding: 15px 100px;
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 0 15px 0 0;
+    border-bottom: white 1px solid;
+}
+.pChat {
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 10px;
+}
+.pContact {
+    background-color: #1071B5;
+    color: white;
+    border-radius: 10px;
+}
+.pInContainer {
+    text-align: center;
+    width: 100px;
+    font-size: 18px;
+}
+
+
+
+.addContact {
+    grid-row: 2;
+    grid-column: 1;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.addContactLocal {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+.contactField {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.sqlResultFromList {
+    width: 100%;
+    height: 60px;
+    display: grid;
+    margin-top: 2px;
+    border: white 1px solid;
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+.sqlResultFriends {
+    width: 100%;
+    height: 60px;
+    display: grid;
+    margin-top: 2px;
+    border: white 1px solid;
+    border-radius: 15px;
+    background-color: #2c2c2c;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+.sqlResultFromListAvatar, .sqlResultFriendsAvatar {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+}
+.avatar {
+    height: 58px;
+    width: 58px;
+}
+.sqlResultFromListFirstName, .sqlResultFriendsFirstName {
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+.sqlResultFromListLastName, .sqlResultFriendsLastName {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+}
+.sqlResultFromListWork, .sqlResultFriendsWork {
+    grid-row: 1;
+    grid-column: 3;
+    width: 100%;
+    height: 100%;
+}
+.sqlResultFromListClass, .sqlResultFriendsClass {
+    grid-row: 2;
+    grid-column: 3;
+    width: 100%;
+    height: 100%;
+}
+.sqlResultButtonFromList {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 4;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+}

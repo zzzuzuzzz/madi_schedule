@@ -16,16 +16,13 @@ setcookie('msg', '', -1, '/')
 <head>
     <meta charset="UTF-8">
     <title>Чат и контакты</title>
-    <link rel="stylesheet" href="../../assets/css/air-datepicker.css">
-    <link rel="stylesheet" href="../../assets/css/headerForChatAndProfile.css">
     <?php
     if (strval($_COOKIE['background']) === "white") {
-        include "../../assets/htmlBlocks/whiteCSS.html";
+        echo '<link rel="stylesheet" href="../../assets/css/schedulePro/contact/chatWhite.css">';
     } else if (strval($_COOKIE['background']) === "black") {
-        include "../../assets/htmlBlocks/blackCSS.html";
+        echo '<link rel="stylesheet" href="../../assets/css/schedulePro/contact/chatBlack.css">';
     }
     ?>
-    <link rel="stylesheet" href="../../assets/css/schedulePro/chatTeacher.css">
 </head>
 <body>
 
@@ -77,7 +74,11 @@ include "../../assets/htmlBlocks/buttons.php"
                             $class = strval($user['class']);
 
                             if ($avatar == NULL) {
-                                $avatar = 'assets/img/svg/iconProfileBlack.svg';
+                                if (strval($_COOKIE['background']) === "black") {
+                                    $avatar = 'assets/img/svg/iconProfileWhite.svg';
+                                } else if (strval($_COOKIE['background']) === "white") {
+                                    $avatar = 'assets/img/svg/iconProfileBlack.svg';
+                                }
                             }
                             if ($class == NULL) {
                                 if ($work == 'teacher') {
