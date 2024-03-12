@@ -14,6 +14,7 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Домашняя страница</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="manifest" href="manifest.json">

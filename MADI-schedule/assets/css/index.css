@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
     * {
         margin: 0;
         padding: 0;
@@ -87,7 +87,7 @@
         color: #c20e0e;
     }
 }
-@media (min-width: 769px) {
+@media screen and (min-width: 481px) {
     * {
         margin: 0;
         padding: 0;
