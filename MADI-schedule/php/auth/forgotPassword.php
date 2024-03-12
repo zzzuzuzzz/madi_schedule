@@ -14,6 +14,7 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Востановление пароля</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
