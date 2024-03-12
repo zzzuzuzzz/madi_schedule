@@ -16,6 +16,7 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
     <meta charset="UTF-8">
     <title>Домашняя страница</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
@@ -402,5 +403,6 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -6,18 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="113cfb31-c985-45f3-bfe1-5a9dd173b53e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/schedule/scheduleBlack.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/schedule/scheduleBlack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/blackCSS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/buttons.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/buttons.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/htmlBlocks/whiteCSS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addSchedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/addSchedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/schedulePro/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/uploads/1708498886logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/popup.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/popup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileVendorClassVar.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile/profileVendorClassVar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,11 +69,11 @@
       <recent name="$PROJECT_DIR$/MADI-schedule" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MADI-schedule/assets/img/jpg" />
+      <recent name="$PROJECT_DIR$/MADI-schedule/assets/img" />
       <recent name="$PROJECT_DIR$/MADI-schedule/assets/img/svg" />
       <recent name="$PROJECT_DIR$/MADI-schedule/assets/css/schedulePro/schedule" />
       <recent name="$PROJECT_DIR$/MADI-schedule/php" />
-      <recent name="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/contact" />
-      <recent name="$PROJECT_DIR$/MADI-schedule/vendor/schedulePro/profile" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,6 +118,7 @@
       <workItem from="1709887928252" duration="4381000" />
       <workItem from="1709959989630" duration="3868000" />
       <workItem from="1710185767890" duration="2046000" />
+      <workItem from="1710229539205" duration="739000" />
     </task>
     <servers />
   </component>
