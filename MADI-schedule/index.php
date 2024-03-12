@@ -15,7 +15,7 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
 <head>
     <meta charset="UTF-8">
     <title>Домашняя страница</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
