@@ -23,11 +23,29 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    width: 450px;
+    padding: 10px;
+    @media screen and (max-width: 480px) {
+        width: 90vw;
+    };
+    @media screen and (min-width: 481px){
+        width: 450px;
+    };
     background: rgba(255, 255, 255, 0.192);
     backdrop-filter: blur(100px);
     border-radius: 15px;
+}
+.hello {
+    width: 100%;
+    font-size: 18px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 a {
     color: #1071B5;
@@ -43,11 +61,11 @@ h3 {
     text-align: center;
 }
 input, select {
-    margin: 10px 0;
+    margin: 5px 0;
     padding:  10px;
     background: transparent;
     border: unset;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     outline: none;
 }
 input:-webkit-autofill {
@@ -62,10 +80,14 @@ button {
     border: unset;
     border-radius: 15px;
     cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.btnEnterToAuth {
-    margin-top: 10px;
-    background: transparent;
+label {
+    text-align: center;
+}
+.btnEnterToScheduleLite {
+    background-color: transparent;
     border: #1071B5 solid 1px;
 }
 .error {

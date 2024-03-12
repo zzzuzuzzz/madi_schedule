@@ -7,7 +7,14 @@
     <list default="true" id="113cfb31-c985-45f3-bfe1-5a9dd173b53e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MADI-schedule/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/changePassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/emailProof.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/emailProof.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/forgotPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/forgotPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/proof.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/proof.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MADI-schedule/php/auth/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/MADI-schedule/php/auth/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +126,7 @@
       <workItem from="1709887928252" duration="4381000" />
       <workItem from="1709959989630" duration="3868000" />
       <workItem from="1710185767890" duration="2046000" />
-      <workItem from="1710229539205" duration="2972000" />
+      <workItem from="1710229539205" duration="5627000" />
     </task>
     <servers />
   </component>

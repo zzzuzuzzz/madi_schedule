@@ -21,16 +21,15 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
 
     <div class="container">
         <form>
-            <label for="email">Введите свой Email</label>
-            <input type="email" id="email" placeholder="madi@mail.ru" name="email">
-            <label for="password">Введите пароль</label>
-            <input title="Пароль должен состоять не менее чем из 8 символов. Так же в пароле не должно быть специальных символов (!,@,#,$,%,^,&,*,<,>,)." type="password" id="password" placeholder="********" name="password">
-            <label for="passwordConfirm">Повторите пароль</label>
-            <input title="Пароль должен состоять не менее чем из 8 символов. Так же в пароле не должно быть специальных символов (!,@,#,$,%,^,&,*,<,>,)." type="password" id="passwordConfirm" placeholder="********" name="passwordConfirm">
-            <label for="firstName">Введите свое имя</label>
-            <input type="text" id="firstName" placeholder="Иван" name="firstName">
-            <label for="lastName">Введите свою фамилию</label>
-            <input type="text" id="lastName" placeholder="Иванович" name="lastName">
+            <div class="hello">
+                <img src="../../assets/img/svg/iconMadiBlack.svg" alt="лого">
+                <p1>Расписание МАДИ</p1>
+            </div>
+            <input type="email" id="email" placeholder="madi@mail.ru" name="Введите свой Email">
+            <input title="Пароль должен состоять не менее чем из 8 символов. Так же в пароле не должно быть специальных символов (!,@,#,$,%,^,&,*,<,>,)." type="password" id="password" placeholder="Введите пароль" name="password">
+            <input title="Пароль должен состоять не менее чем из 8 символов. Так же в пароле не должно быть специальных символов (!,@,#,$,%,^,&,*,<,>,)." type="password" id="passwordConfirm" placeholder="Повторите пароль" name="passwordConfirm">
+            <input type="text" id="firstName" placeholder="Введите свое имя" name="firstName">
+            <input type="text" id="lastName" placeholder="Введите свою фамилию" name="lastName">
             <label>
                 <select name="select">
                     <option name="unvalue" value="unvalue" selected disabled>Выберете нужный варинат</option>

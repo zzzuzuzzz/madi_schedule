@@ -16,6 +16,10 @@ if (!$_COOKIE['codeProof']) {
 
 <div class="container">
     <form>
+        <div class="hello">
+            <img src="../../assets/img/svg/iconMadiBlack.svg" alt="лого">
+            <p1>Расписание МАДИ</p1>
+        </div>
         <label>На вашу почту было отправлено сообщение. Пожайлуста, введите число из сообщения в это поле ввода</label>
         <input type="text" name="codeProof" placeholder="1528">
         <button type="submit" class="btnEnterToChangePassword">Продолжить</button>

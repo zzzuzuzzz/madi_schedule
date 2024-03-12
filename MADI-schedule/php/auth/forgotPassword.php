@@ -21,6 +21,10 @@ if (!$_COOKIE['user'] && $_COOKIE['profile']) {
 
 <div class="container">
     <form>
+        <div class="hello">
+            <img src="../../assets/img/svg/iconMadiBlack.svg" alt="лого">
+            <p1>Расписание МАДИ</p1>
+        </div>
         <label>Для востановления пароля введите свой email</label>
         <input type="email" name="email" placeholder="madi@mail.ru">
         <button type="submit" class="btnEnterToProof">Продолжить</button>

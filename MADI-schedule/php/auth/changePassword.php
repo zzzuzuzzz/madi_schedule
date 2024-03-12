@@ -16,10 +16,12 @@ if (!$_COOKIE['codeProof']) {
 
 <div class="container">
     <form>
-        <label>Введите новый пароль</label>
-        <input type="password" name="password" placeholder="********">
-        <label>Повторите пароль</label>
-        <input type="password" name="passwordConfirm" placeholder="********">
+        <div class="hello">
+            <img src="../../assets/img/svg/iconMadiBlack.svg" alt="лого">
+            <p1>Расписание МАДИ</p1>
+        </div>
+        <input type="password" name="password" placeholder="Введите новый пароль">
+        <input type="password" name="passwordConfirm" placeholder="Повторите пароль">
         <button type="submit" class="btnEnterToAuthFromChangePassword">Сменить пароль</button>
         <p class="msg none">Lorem ipsum dolor sit amet.</p>
     </form>
